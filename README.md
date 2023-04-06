@@ -1,5 +1,4 @@
 # Final Project
-=============
 
 ## File Structure
 - Commision: computes the commision earned by salesman of locks, stocks, and barrels
