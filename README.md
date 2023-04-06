@@ -9,7 +9,7 @@
 ### To Do (0/23 complete):
 
 - [X] Create Triangle program
-- [ ] Create NextDate program
+- [X] Create NextDate program
 - [X] Create Commision program
 - [ ] Install JUnit for test case and data generation
 - [ ] Install JaCoCo plugin for test coverage graph and metrics 
