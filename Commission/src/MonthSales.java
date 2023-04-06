@@ -3,7 +3,6 @@ public class MonthSales {
     private final double stockPrice = 30.0;
     private final double barrelPrice = 25.0;
     private int totalLocks = 0, totalStocks = 0, totalBarrels = 0;
-    
     private double sales = 0, commission;
 
     public void sumLocks(int locks) {
