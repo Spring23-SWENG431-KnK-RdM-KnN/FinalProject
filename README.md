@@ -8,7 +8,7 @@
 > These 3 problems can be viewed with their pseudocode in Module 2 PartII on Canvas, starting with the [Triangle problem](https://psu.instructure.com/courses/2243925/pages/m2-partii-dot-2-unit-testing-illustration-1-the-triangle-problem?module_item_id=37158618)
 ### To Do (0/23 complete):
 
-- [ ] Create Triangle program
+- [X] Create Triangle program
 - [ ] Create NextDate program
 - [X] Create Commision program
 - [ ] Install JUnit for test case and data generation
