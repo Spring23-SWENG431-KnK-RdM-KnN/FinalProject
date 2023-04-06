@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8149727-e087-4152-a686-ab009a7c339a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TriangleDeterminer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commission/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Commission/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="a8149727-e087-4152-a686-ab009a7c339a" name="Changes" comment="Triangle problem solution" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,8 +57,16 @@
       <option name="presentableId" value="Default" />
       <updated>1680752302928</updated>
       <workItem from="1680752304009" duration="1000" />
-      <workItem from="1680755009766" duration="1268000" />
+      <workItem from="1680755009766" duration="1285000" />
     </task>
+    <task id="LOCAL-00001" summary="Triangle problem solution">
+      <created>1680756294835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680756294835</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,5 +82,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Triangle problem solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Triangle problem solution" />
   </component>
 </project>
