@@ -24,10 +24,10 @@ public class TriangleDeterminer {
             match += 1;
         }
         if (a == c) {
-            match += 1;
+            match += 2;
         }
         if (b == c) {
-            match += 1;
+            match += 3;
         }
 
         return match;
