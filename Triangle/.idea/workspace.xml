@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8149727-e087-4152-a686-ab009a7c339a" name="Changes" comment="Add helper test class instance variables">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Triangle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Triangle.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TriangleDeterminerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TriangleDeterminerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="a8149727-e087-4152-a686-ab009a7c339a" name="Changes" comment="Generate coverage report" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/TestCoverageReports" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -141,7 +139,7 @@
       <workItem from="1680904434918" duration="2428000" />
       <workItem from="1680906874149" duration="1069000" />
       <workItem from="1680907949377" duration="1263000" />
-      <workItem from="1680989995392" duration="2237000" />
+      <workItem from="1680989995392" duration="2454000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle problem solution">
       <created>1680756294835</created>
@@ -164,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680991729654</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Generate coverage report">
+      <created>1680992436583</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680992436583</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,13 +217,15 @@
     <MESSAGE value="Triangle problem solution" />
     <MESSAGE value="Finish TriangleDeterminer tests" />
     <MESSAGE value="Add helper test class instance variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add helper test class instance variables" />
+    <MESSAGE value="Generate coverage report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generate coverage report" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Triangle$TriangleDeterminerTest.ic" NAME="TriangleDeterminerTest Coverage Results" MODIFIED="1680992275230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Triangle$TriangleDeterminerTest_getMatchValue.exec" NAME="TriangleDeterminerTest.getMatchValue Coverage Results" MODIFIED="1680992056842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
