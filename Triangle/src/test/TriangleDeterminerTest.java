@@ -12,6 +12,10 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class TriangleDeterminerTest {
     TriangleDeterminer triDet = Instancio.create(TriangleDeterminer.class);
+    private static final String nonTri = "NotATriangle";
+    private static final String scalene = "Scalene";
+    private static final String equilat = "Equilateral";
+    private static final String isosc = "Isosceles";
 
     @ParameterizedTest
     @MethodSource
@@ -37,10 +41,19 @@ class TriangleDeterminerTest {
         assertEquals(expType, type);
     }
 
-    private static Stream<Arguments> getTriangleValue() {
+    private static Stream<Arguments> getTriangleType() {
         return Stream.of(
-                arguments(""),
-                arguments()
+                arguments(nonTri, 0, 1, 2, 5),
+                arguments(nonTri, 0, 5, 1, 2),
+                arguments(nonTri, 0, 1, 5, 2),
+                arguments(scalene, 0, 4, 5, 3),
+                arguments(nonTri, 1, 1, 1, 0),
+                arguments(nonTri, 2, 1, 2, 1),
+                arguments(nonTri, 3, 2, 1, 1),
+                arguments(isosc, 1, 1, 1, 2),
+                arguments(isosc, 2, 3, 2, 3),
+                arguments(isosc, 3, 1, 2, 2),
+                arguments(equilat, 6, 1, 1, 1)
         );
     }
 }
