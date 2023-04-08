@@ -1,18 +1,21 @@
+package nd;
+
 /**
  * Code adapted with little change from pseudocode in book "Software Testing" Chapter 2
  */
 public class DateCalculator {
     private int tomorrowDay, tomorrowMonth, tomorrowYear;
     private final int day, month ,year;
+
     public DateCalculator(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;
         tomorrowYear = year;
     }
-    public void printTomorrowDate() {
+    public String getTomorrowDate() {
         calculate();
-        System.out.printf("Tomorrow's date is %02d %02d %d\n", tomorrowMonth, tomorrowDay, tomorrowYear);
+        return String.format("Tomorrow's date is %02d %02d %d\n", tomorrowMonth, tomorrowDay, tomorrowYear);
     }
     private void calculate() {
         switch (month) {

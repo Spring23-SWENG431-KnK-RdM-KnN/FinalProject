@@ -1,3 +1,5 @@
+package nd;
+
 import java.util.Scanner;
 
 /**
@@ -27,6 +29,6 @@ public class Main {
             }
         } while (c1 && c2 && c3);
         DateCalculator dc = new DateCalculator(day, month, year);
-        dc.printTomorrowDate();
+        System.out.println(dc.getTomorrowDate());
     }
 }
