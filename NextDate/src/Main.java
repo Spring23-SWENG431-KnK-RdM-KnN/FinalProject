@@ -1,5 +1,3 @@
-package nd;
-
 import java.util.Scanner;
 
 /**

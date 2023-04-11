@@ -1,5 +1,3 @@
-package nd;
-
 /**
  * Code adapted with little change from pseudocode in book "Software Testing" Chapter 2
  */
