@@ -112,34 +112,30 @@ public class MonthSalesTest
 
     @ParameterizedTest
     @MethodSource
-    void calcCommission(double sales)
+    void calcCommission(double exp, double sales)
     {
         ms.setSales(sales);
         ms.calcCommission();
-        double exp;
-
-        if (sales > 1800.0) {
-            exp = 0.1 * 1000.0;
-            exp += exp + 0.15 * 800.0;
-            exp += exp + 0.2 * (sales - 1800.0);
-        } else if (sales > 1000.0) {
-            exp = 0.1 * 1000.0;
-            exp += exp + 0.15 * (sales - 1000.0);
-        } else {
-            exp = 0.1 * sales;
-        }
 
         assertEquals(exp, ms.getCommission());
     }
 
     private static Stream<Arguments> calcCommission() {
         return Stream.of(
-                arguments(1000),
-                arguments(-1000),
-                arguments(0),
-                arguments(10000),
-                arguments(-1),
-                arguments(1)
+                // <=1000
+                arguments(100, 1000),
+                arguments(-100.1, -1001),
+                arguments(.1, 1),
+                arguments(0, 0),
+
+                // <=1800
+                arguments(100.0015, 1000.01),
+                arguments(220, 1800),
+
+                // >1800
+                arguments(220.002, 1800.01),
+                arguments(1860, 10000)
+
         );
 
 
