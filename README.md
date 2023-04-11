@@ -14,10 +14,10 @@
 - [X] Install JUnit for test case and data generation
 - [X] Install JaCoCo plugin for test coverage graph and metrics 
 - [ ] Generate test cases using JUnit: Triangle. Guide [here](https://www.baeldung.com/java-test-data-instacio)
-- [X] Generate test cases using JUnit: Commission. Guide [here](https://www.baeldung.com/java-test-data-instacio)
+- [ ] Generate test cases using JUnit: Commission. Guide [here](https://www.baeldung.com/java-test-data-instacio)
 - [ ] Generate test cases using JUnit: NextDate. Guide [here](https://www.baeldung.com/java-test-data-instacio)
 - [ ] Compute the coverage with JaCoCo Triangle
-- [X] Compute the coverage with JaCoCo Commission
+- [ ] Compute the coverage with JaCoCo Commission
 - [ ] Compute the coverage with JaCoCo NextDate
 - [ ] Create tool to minimize test cases based on similarity metrics and optimization alogirithm
 - [ ] Apply the created tool to generate new test data and test cases

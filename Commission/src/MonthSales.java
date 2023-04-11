@@ -57,4 +57,16 @@ public class MonthSales {
     public double getCommission() {
         return commission;
     }
+
+    public void reset()
+    {
+        totalBarrels = 0;
+        totalLocks = 0;
+        totalStocks = 0;
+    }
+
+    public void setSales(double sal)
+    {
+        sales = sal;
+    }
 }
