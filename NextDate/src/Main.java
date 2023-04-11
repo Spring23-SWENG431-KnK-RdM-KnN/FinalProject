@@ -25,7 +25,7 @@ public class Main {
             if (!c3) {
                 System.out.println("Value of year not in the range 1812..2012");
             }
-        } while (c1 && c2 && c3);
+        } while (!(c1 && c2 && c3));
         DateCalculator dc = new DateCalculator(day, month, year);
         System.out.println(dc.getTomorrowDate());
     }

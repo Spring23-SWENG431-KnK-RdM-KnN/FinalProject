@@ -4,15 +4,20 @@
 public class DateCalculator {
     private int tomorrowDay, tomorrowMonth, tomorrowYear;
     private final int day, month ,year;
+    private boolean isInvalidInput = false;
 
     public DateCalculator(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;
+        tomorrowMonth = month;
         tomorrowYear = year;
     }
     public String getTomorrowDate() {
         calculate();
+        if (isInvalidInput) {
+            return "";
+        }
         return String.format("Tomorrow's date is %02d %02d %d\n", tomorrowMonth, tomorrowDay, tomorrowYear);
     }
     private void calculate() {
@@ -33,6 +38,7 @@ public class DateCalculator {
                     tomorrowMonth = month + 1;
                 } else {
                     System.out.println("Invalid Input Date");
+                    isInvalidInput = true;
                 }
             }
             case 12 -> {
@@ -43,6 +49,7 @@ public class DateCalculator {
                     tomorrowMonth = 1;
                     if (year == 2012) {
                         System.out.println("Invalid Input Date");
+                        isInvalidInput = true;
                     } else {
                         tomorrowYear = year + 1;
                     }
@@ -64,7 +71,11 @@ public class DateCalculator {
                         tomorrowMonth = 3;
                     } else {
                         System.out.println("Invalid Input Date");
+                        isInvalidInput = true;
                     }
+                } else {
+                    System.out.println("Invalid Input Date");
+                    isInvalidInput = true;
                 }
             }
         }
