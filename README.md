@@ -6,18 +6,18 @@
 - Triangle: java program computing the type of triangle based on side lengths.
 
 > These 3 problems and their pseudocode can be viewed in Module 2 Part II on Canvas or the book "Software Testing", starting with the [Triangle problem](https://psu.instructure.com/courses/2243925/pages/m2-partii-dot-2-unit-testing-illustration-1-the-triangle-problem?module_item_id=37158618)
-### To Do (7/23 complete):
+### To Do (9/29 complete):
 
 - [X] Create Triangle program
 - [X] Create NextDate program
 - [X] Create Commission program
 - [X] Install JUnit for test case and data generation
 - [X] Install JaCoCo plugin for test coverage graph and metrics 
-- [ ] Generate test cases using JUnit: Triangle. Guide [here](https://www.baeldung.com/java-test-data-instacio)
+- [X] Generate test cases using JUnit: Triangle. Guide [here](https://www.baeldung.com/java-test-data-instacio)
 - [X] Generate test cases using JUnit: Commission. Guide [here](https://www.baeldung.com/java-test-data-instacio)
-- [ ] Generate test cases using JUnit: NextDate. Guide [here](https://www.baeldung.com/java-test-data-instacio)
-- [ ] Compute the coverage with JaCoCo Triangle
-- [X] Compute the coverage with JaCoCo Commission
+- [X] Generate test cases using JUnit: NextDate. Guide [here](https://www.baeldung.com/java-test-data-instacio)
+- [X] Compute the coverage with JaCoCo Triangle
+- [ ] Compute the coverage with JaCoCo Commission
 - [ ] Compute the coverage with JaCoCo NextDate
 - [ ] Create tool to minimize test cases based on similarity metrics and optimization algorithm
 - [ ] Apply the created tool to generate new test data and test cases
