@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Commission/Commission.iml" filepath="$PROJECT_DIR$/Commission/Commission.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/FinalProject.iml" filepath="$PROJECT_DIR$/.idea/FinalProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GWOTool/GWOTool.iml" filepath="$PROJECT_DIR$/GWOTool/GWOTool.iml" />
       <module fileurl="file://$PROJECT_DIR$/NextDate/NextDate.iml" filepath="$PROJECT_DIR$/NextDate/NextDate.iml" />
       <module fileurl="file://$PROJECT_DIR$/Triangle/Triangle.iml" filepath="$PROJECT_DIR$/Triangle/Triangle.iml" />
     </modules>
