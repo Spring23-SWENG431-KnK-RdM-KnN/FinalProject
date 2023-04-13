@@ -24,10 +24,10 @@ public class TriangleDeterminer {
             match += 1;
         }
         if (a == c) {
-            match += 1;
+            match += 2;
         }
         if (b == c) {
-            match += 1;
+            match += 3;
         }
 
         return match;
@@ -42,7 +42,7 @@ public class TriangleDeterminer {
      * @return string name of triangle type
      */
     public String getTriangleType(int match, int a, int b, int c) {
-        if (match == 0) {
+        if (match == 0) { // No sides same len
             if (a + b <= c) {
                 return nonTri;
             } else if (b + c <= a) {
@@ -52,25 +52,25 @@ public class TriangleDeterminer {
             } else {
                 return scalene;
             }
-        } else if (match == 1) {
+        } else if (match == 1) { // a == b
             if (a + c <= b) {
                 return nonTri;
             } else {
                 return isosc;
             }
-        } else if (match == 2) {
+        } else if (match == 2) { // a == c
             if (a + c <= b) {
                 return nonTri;
             } else {
                 return isosc;
             }
-        } else if (match == 3) {
+        } else if (match == 3) { // b == c
             if (b + c <= a) {
                 return nonTri;
             } else {
                 return isosc;
             }
-        } else {
+        } else {  // a == b && a == c && b == c
             return equilat;
         }
     }
