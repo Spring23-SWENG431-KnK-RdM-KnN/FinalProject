@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class CommissionMain {
 
     public static void main(String[] args) {
         Scanner inputGetter = new Scanner(System.in);
