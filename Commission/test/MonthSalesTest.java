@@ -1,4 +1,3 @@
-import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -13,7 +12,7 @@ public class MonthSalesTest
     private final double lockPrice = 45.0;
     private final double stockPrice = 30.0;
     private final double barrelPrice = 25.0;
-    MonthSales ms = Instancio.create(MonthSales.class);
+    MonthSales ms = new MonthSales();
 
     @ParameterizedTest
     @MethodSource
