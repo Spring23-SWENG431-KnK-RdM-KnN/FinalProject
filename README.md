@@ -12,7 +12,7 @@
 - [X] Create NextDate program
 - [X] Create Commission program
 - [X] Install JUnit for test case and data generation
-- [X] Install JaCoCo plugin for test coverage graph and metrics 
+- [X] Install JaCoCo plugin for test coverage graph and metrics
 - [X] Generate test cases using JUnit: Triangle. Guide [here](https://www.baeldung.com/java-test-data-instacio)
 - [X] Generate test cases using JUnit: Commission. Guide [here](https://www.baeldung.com/java-test-data-instacio)
 - [X] Generate test cases using JUnit: NextDate. Guide [here](https://www.baeldung.com/java-test-data-instacio)

@@ -1,3 +1,7 @@
+import java.text.DecimalFormat;
+
+import static java.lang.Math.round;
+
 public class MonthSales {
     private final double lockPrice = 45.0;
     private final double stockPrice = 30.0;
@@ -44,17 +48,33 @@ public class MonthSales {
     public void calcCommission() {
         if (sales > 1800.0) {
             commission = 0.1 * 1000.0;
-            commission += commission + 0.15 * 800.0;
-            commission += commission + 0.2 * (sales - 1800.0);
+            commission += 0.15 * 800.0;
+            commission +=  0.2 * (sales - 1800.0);
         } else if (sales > 1000.0) {
             commission = 0.1 * 1000.0;
-            commission += commission + 0.15 * (sales - 1000.0);
+            commission += 0.15 * (sales - 1000.0);
         } else {
             commission = 0.1 * sales;
         }
     }
 
-    public double getCommission() {
+    public double getCommission()
+    {
+
+
         return commission;
+    }
+
+    public void reset()
+    {
+        totalBarrels = 0;
+        totalLocks = 0;
+        totalStocks = 0;
+    }
+
+    public void setSales(double sal)
+    {
+        sales = sal;
+        commission = 0;
     }
 }
