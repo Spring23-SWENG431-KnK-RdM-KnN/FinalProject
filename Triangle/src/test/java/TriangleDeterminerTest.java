@@ -1,4 +1,3 @@
-import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class TriangleDeterminerTest {
-    TriangleDeterminer triDet = Instancio.create(TriangleDeterminer.class);
+    TriangleDeterminer triDet = new TriangleDeterminer();
     private static final String nonTri = "NotATriangle";
     private static final String scalene = "Scalene";
     private static final String equilat = "Equilateral";
