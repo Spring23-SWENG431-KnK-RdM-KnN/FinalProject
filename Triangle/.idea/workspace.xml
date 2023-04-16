@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8149727-e087-4152-a686-ab009a7c339a" name="Changes" comment="Generate coverage report" />
+    <list default="true" id="a8149727-e087-4152-a686-ab009a7c339a" name="Changes" comment="Generate coverage report">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/TestCoverageReports" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -70,7 +73,15 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TriangleDeterminerTest">
+  <component name="RunManager" selected="JUnit.All in Triangle">
+    <configuration name="All in Triangle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Triangle" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AllTests" type="JUnit" factoryName="JUnit">
       <module name="Triangle" />
       <extension name="coverage" runner="jacoco" />
@@ -116,11 +127,13 @@
     <list>
       <item itemvalue="JUnit.AllTests" />
       <item itemvalue="JUnit.TriangleDeterminerTest.getTriangleType" />
+      <item itemvalue="JUnit.All in Triangle" />
       <item itemvalue="JUnit.TriangleDeterminerTest" />
       <item itemvalue="JUnit.TriangleDeterminerTest.getMatchValue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Triangle" />
         <item itemvalue="JUnit.TriangleDeterminerTest" />
         <item itemvalue="JUnit.TriangleDeterminerTest.getMatchValue" />
       </list>
@@ -140,6 +153,7 @@
       <workItem from="1680906874149" duration="1069000" />
       <workItem from="1680907949377" duration="1263000" />
       <workItem from="1680989995392" duration="2454000" />
+      <workItem from="1681593384420" duration="1743000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle problem solution">
       <created>1680756294835</created>
@@ -186,7 +200,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="origin/TriangleTests" />
                       </list>
                     </value>
                   </entry>
@@ -202,6 +216,11 @@
         <entry key="Branch">
           <value>
             <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/TriangleTests" />
+                </option>
+              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="origin/main" />
@@ -225,6 +244,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Triangle$All_in_Triangle.ic" NAME="All in Triangle Coverage Results" MODIFIED="1681594773858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Triangle$TriangleDeterminerTest.ic" NAME="TriangleDeterminerTest Coverage Results" MODIFIED="1680992275230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Triangle$TriangleDeterminerTest_getMatchValue.exec" NAME="TriangleDeterminerTest.getMatchValue Coverage Results" MODIFIED="1680992056842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
