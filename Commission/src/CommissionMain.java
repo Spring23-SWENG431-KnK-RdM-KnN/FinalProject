@@ -1,14 +1,21 @@
 import java.util.Scanner;
 
-public class Main {
+public class CommissionMain {
 
     public static void main(String[] args) {
         Scanner inputGetter = new Scanner(System.in);
         MonthSales gerod = new MonthSales();
         int locks, stocks, barrels;
         do {
-            System.out.print("Enter number of locks or -1 to stop entering locks: ");
+            System.out.print("Enter number of locks or -1 to stop: ");
             locks = inputGetter.nextInt();
+
+            if (locks == -1)
+            {
+                System.out.println();
+                break;
+            }
+
             System.out.print("Enter stocks: ");
             stocks = inputGetter.nextInt();
             System.out.print("Enter barrels: ");

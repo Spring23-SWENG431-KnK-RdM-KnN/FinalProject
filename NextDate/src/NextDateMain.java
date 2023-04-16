@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Code adapted with little change from pseudocode in book "Software Testing" Chapter 2
  */
-public class Main {
+public class NextDateMain {
     public static void main(String[] args) {
         int day, month ,year;
         boolean c1, c2, c3;
@@ -25,8 +25,8 @@ public class Main {
             if (!c3) {
                 System.out.println("Value of year not in the range 1812..2012");
             }
-        } while (c1 && c2 && c3);
+        } while (!(c1 && c2 && c3));
         DateCalculator dc = new DateCalculator(day, month, year);
-        dc.printTomorrowDate();
+        System.out.println(dc.getTomorrowDate());
     }
 }

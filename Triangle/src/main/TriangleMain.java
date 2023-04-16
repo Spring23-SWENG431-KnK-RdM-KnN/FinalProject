@@ -5,7 +5,7 @@ import java.util.Scanner;
  * pseudo code Module 2 PartII.2 Unit Testing Illustration_1
  * The Triangle Program on canvas.
  */
-public class Main {
+public class TriangleMain {
     public static void main(String[] args) {
         Scanner inputGetter = new Scanner(System.in);
         System.out.println("Enter 3 integers as the sides of a triangle.");
