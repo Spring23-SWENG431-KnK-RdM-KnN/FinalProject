@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7089d910-8358-45d9-bac7-fe01bb385be2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoverageReports/jacoco.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RegressionTest0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +172,7 @@
       <workItem from="1682239782684" duration="169000" />
       <workItem from="1682240102781" duration="110000" />
       <workItem from="1682241286024" duration="832000" />
-      <workItem from="1682242288272" duration="3799000" />
+      <workItem from="1682242288272" duration="4316000" />
     </task>
     <servers />
   </component>
