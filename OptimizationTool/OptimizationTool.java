@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.concurrent.Flow;
+import java.lang.reflect.Method;
 
 public class OptimizationTool
 {
@@ -17,6 +17,8 @@ public class OptimizationTool
     private JTextArea output;
     private JPanel buttonsArea;
     private JButton chooseProjectButton;
+    String project;
+
 
     /**
      * Pattern taken from: https://www.tutorialspoint.com/how-to-add-action-listener-to-jbutton-in-java
@@ -38,10 +40,12 @@ public class OptimizationTool
         chooseProjectButton = new JButton("Choose Project");
         chooseProjectButton.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 16));
         chooseProjectButton.setMinimumSize(new Dimension(76, 42));
+        // This part causes the app to:
+        // 1. pop open a file selector where you need to select a folder
+        // 2. Generates the Randoop tests in JUnit 4 format (no option to generate in JUnit 5 format)
         chooseProjectButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String project;
                 JFileChooser jfc = new JFileChooser();
 
                 jfc.setFileSelectionMode(1);
@@ -49,6 +53,8 @@ public class OptimizationTool
                 if (jfc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
                     project = jfc.getSelectedFile().getAbsolutePath();
 
+                    // Remove this part or comment it out if you don't want to re-generate
+                    // Randoop JUnit 4 tests while testing additional functionality of GUI
                     try {
                         Process process = Runtime.getRuntime()
                                 .exec("java -classpath " + project +
@@ -119,6 +125,25 @@ public class OptimizationTool
         while ((line = reader.readLine()) != null) {
             output.append("\n" + line);
         }
+    }
+
+    /**
+     * Create and return sets of tests
+     */
+    public Method[][] createTestSets() {
+        // Need to import the RegressionTest0 class from whichever project
+
+        RegressionTest0 testSuite = new RegressionTest0();
+        Class c = testSuite.getClass();
+        Method tests[] = c.getDeclaredMethods();
+        int sizeOfSets = tests.length / 10;
+        Method[][] testSets = new Method[10][];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < sizeOfSets; j++) {
+                testSets[i][j] = tests[i+j];
+            }
+        }
+        return testSets;
     }
 
 }
