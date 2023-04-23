@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7089d910-8358-45d9-bac7-fe01bb385be2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Commission/classestesting.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Commission/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Commission/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/Commission.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Commission/Commission.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Commission/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/src/CommissionMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Commission/src/main/java/org/example/CommissionMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/src/MonthSales.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Commission/src/main/java/org/example/MonthSales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/target/classes/CommissionMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/target/classes/MonthSales.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/target/test-classes/MonthSalesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Commission/target/test-classes/MonthSalesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commission/test/MonthSalesTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +140,7 @@
       <workItem from="1682216970237" duration="17000" />
       <workItem from="1682217032747" duration="4147000" />
       <workItem from="1682222476164" duration="959000" />
+      <workItem from="1682228950346" duration="300000" />
     </task>
     <servers />
   </component>
