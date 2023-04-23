@@ -19,11 +19,15 @@
 - [X] Compute the coverage with JaCoCo Triangle
 - [X] Compute the coverage with JaCoCo Commission
 - [X] Compute the coverage with JaCoCo NextDate
+- [ ] Create Genetic Algorithm Fitness Function: Tournament
+- [ ] Create Genetic Algorithm Fitness Function: Crossover (breed)
 - [ ] Create tool to minimize test cases based on similarity metrics and optimization algorithm
+- [ ] Create function to take in csv test cases and split them into sets
+- [ ] Run genetic algorithm to find best 5 sets and crossbreed them for best coverage
 - [ ] Apply the created tool to generate new test data and test cases for Triangle
 - [ ] Apply the created tool to generate new test data and test cases for Commission
 - [ ] Apply the created tool to generate new test data and test cases for NextDate
-- [ ] Execute programs and calculate coverage
+- [ ] Execute generated test cases and calculate coverage
 - [ ] Use metrics to write report results
 - [ ] Create graph and figures to display results
 - [ ] Write Abstract 200-250 words
