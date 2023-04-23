@@ -6,7 +6,7 @@
 - Triangle: java program computing the type of triangle based on side lengths.
 
 > These 3 problems and their pseudocode can be viewed in Module 2 Part II on Canvas or the book "Software Testing", starting with the [Triangle problem](https://psu.instructure.com/courses/2243925/pages/m2-partii-dot-2-unit-testing-illustration-1-the-triangle-problem?module_item_id=37158618)
-### To Do (11/29 complete):
+### To Do (11/33 complete):
 
 - [X] Create Triangle program
 - [X] Create NextDate program
