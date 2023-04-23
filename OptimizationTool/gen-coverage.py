@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 
-def main() -> int:
+def main():
     clean_covg = subprocess.run(["mvn", "clean"])
     if clean_covg.returncode != 0:
         return -1
