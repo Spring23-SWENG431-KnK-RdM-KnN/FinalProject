@@ -1,3 +1,5 @@
+package org.example;
+
 /**
  * Code adapted with little change from
  * pseudo code Module 2 PartII.2 Unit Testing Illustration_1
@@ -75,3 +77,4 @@ public class TriangleDeterminer {
         }
     }
 }
+

@@ -4,144 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8149727-e087-4152-a686-ab009a7c339a" name="Changes" comment="Generate coverage report">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_instancio_instancio_core_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_instancio_instancio_junit_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/css/coverage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/css/idea.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/img/arrowDown.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/img/arrowUp.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/js/highlight.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/js/highlightjs-line-numbers.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCoverageReportBeforeTool/ns-1/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Triangle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Triangle.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TriangleDeterminerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TriangleDeterminerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TriangleDeterminer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TriangleMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TriangleDeterminerTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="7089d910-8358-45d9-bac7-fe01bb385be2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExportToHTMLSettings">
-    <option name="OPEN_IN_BROWSER" value="true" />
-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/TestCoverageReports" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2O2IZBkoPBGwuEUxfVQbYYGIgOR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2OnzNNGD3mgBK4kpB1DDzkjBvKX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;coverage&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
+      <recent name="$PROJECT_DIR$/src/main/resources/lib" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TriangleDeterminerTest (1)">
+  <component name="RunManager" selected="Shell Script.shell.sh">
     <configuration name="All in Triangle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Triangle" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AllTests" type="JUnit" factoryName="JUnit">
-      <module name="Triangle" />
-      <extension name="coverage" runner="jacoco" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TriangleDeterminerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Triangle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.java" />
-      <option name="MAIN_CLASS_NAME" value="test.java.TriangleDeterminerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,156 +67,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriangleDeterminerTest.getMatchValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Triangle" />
-      <extension name="coverage" runner="jacoco" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TriangleDeterminerTest" />
-      <option name="METHOD_NAME" value="getMatchValue(int,int,int,int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="shell.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/shell.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
     </configuration>
-    <configuration name="TriangleDeterminerTest.getTriangleType" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-      <module name="Triangle" />
-      <extension name="coverage" runner="jacoco" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TriangleDeterminerTest" />
-      <option name="METHOD_NAME" value="getTriangleType(java.lang.String,int,int,int,int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="JUnit.AllTests" />
-      <item itemvalue="JUnit.TriangleDeterminerTest.getTriangleType" />
-      <item itemvalue="JUnit.All in Triangle" />
-      <item itemvalue="JUnit.TriangleDeterminerTest" />
-      <item itemvalue="JUnit.TriangleDeterminerTest (1)" />
-      <item itemvalue="JUnit.TriangleDeterminerTest.getMatchValue" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TriangleDeterminerTest (1)" />
-        <item itemvalue="JUnit.TriangleDeterminerTest" />
+        <item itemvalue="Shell Script.shell.sh" />
         <item itemvalue="JUnit.All in Triangle" />
-        <item itemvalue="JUnit.TriangleDeterminerTest.getMatchValue" />
+        <item itemvalue="JUnit.TriangleDeterminerTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a8149727-e087-4152-a686-ab009a7c339a" name="Changes" comment="" />
-      <created>1680752302928</created>
+      <changelist id="7089d910-8358-45d9-bac7-fe01bb385be2" name="Changes" comment="" />
+      <created>1682211093016</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1680752302928</updated>
-      <workItem from="1680752304009" duration="1000" />
-      <workItem from="1680755009766" duration="1285000" />
-      <workItem from="1680904434918" duration="2428000" />
-      <workItem from="1680906874149" duration="1069000" />
-      <workItem from="1680907949377" duration="1263000" />
-      <workItem from="1680989995392" duration="2454000" />
-      <workItem from="1681593384420" duration="1743000" />
-      <workItem from="1682206014712" duration="10000" />
-      <workItem from="1682208328654" duration="2731000" />
-      <workItem from="1682211109617" duration="666000" />
+      <updated>1682211093016</updated>
+      <workItem from="1682211094074" duration="4987000" />
     </task>
-    <task id="LOCAL-00001" summary="Triangle problem solution">
-      <created>1680756294835</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1680756294835</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Finish TriangleDeterminer tests">
-      <created>1680991293103</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1680991293103</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add helper test class instance variables">
-      <created>1680991729654</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1680991729654</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Generate coverage report">
-      <created>1680992436583</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1680992436583</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/TriangleTests" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/TriangleTests" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/main" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Triangle problem solution" />
-    <MESSAGE value="Finish TriangleDeterminer tests" />
-    <MESSAGE value="Add helper test class instance variables" />
-    <MESSAGE value="Generate coverage report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generate coverage report" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Triangle$All_in_Triangle.ic" NAME="All in Triangle Coverage Results" MODIFIED="1681594773858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Triangle$TriangleDeterminerTest.ic" NAME="TriangleDeterminerTest Coverage Results" MODIFIED="1682209395669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Triangle$TriangleDeterminerTest_getMatchValue.exec" NAME="TriangleDeterminerTest.getMatchValue Coverage Results" MODIFIED="1682209184693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Triangle$TriangleDeterminerTest_getMatchValue.ic" NAME="TriangleDeterminerTest.getMatchValue Coverage Results" MODIFIED="1682208872677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Triangle$TriangleDeterminerTest.ic" NAME="TriangleDeterminerTest Coverage Results" MODIFIED="1682211627088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
