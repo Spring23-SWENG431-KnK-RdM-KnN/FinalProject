@@ -1,3 +1,5 @@
+package org.example;
+
 /**
  * Code adapted with little change from pseudocode in book "Software Testing" Chapter 2
  */
