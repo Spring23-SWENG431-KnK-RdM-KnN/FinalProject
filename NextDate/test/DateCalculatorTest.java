@@ -1,6 +1,7 @@
 //import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 //import org.junit.jupiter.params.provider.ValueSource;
 import java.util.stream.Stream;
@@ -10,8 +11,9 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class DateCalculatorTest {
     DateCalculator dc;
 
+    // .csv file may be needed to be set to LF if running on Intellij
     @ParameterizedTest
-    @MethodSource
+    @CsvFileSource(files = "getTomorrowDateData.csv")
     void getTomorrowDate(int day, int month, int year, String expected) {
         dc = new DateCalculator(day, month, year);
         String str = dc.getTomorrowDate();

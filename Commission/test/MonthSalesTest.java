@@ -128,11 +128,11 @@ public class MonthSalesTest
                 arguments(0, 0),
 
                 // <=1800
-                arguments(100.0015, 1000.01),
+                arguments(100.00, 1000.01),
                 arguments(220, 1800),
 
                 // >1800
-                arguments(220.002, 1800.01),
+                arguments(220.00, 1800.01),
                 arguments(1860, 10000)
 
         );

@@ -1,6 +1,5 @@
-import java.text.DecimalFormat;
-
-import static java.lang.Math.round;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class MonthSales {
     private final double lockPrice = 45.0;
@@ -56,6 +55,10 @@ public class MonthSales {
         } else {
             commission = 0.1 * sales;
         }
+        BigDecimal c = BigDecimal.valueOf(commission);
+        c = c.setScale(2, RoundingMode.HALF_UP);
+        commission = c.doubleValue();
+        System.out.println(commission);
     }
 
     public double getCommission()
