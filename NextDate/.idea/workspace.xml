@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a93b7125-7700-4d7d-842f-12e17d50c990" name="Changes" comment="Create class to calculate the next date">
-      <change beforePath="$PROJECT_DIR$/../.idea/FinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/FinalProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NextDate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NextDate.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DateCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DateCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NextDateMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NextDateMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DateCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NextDateMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DateCalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DateCalculatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/DateCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DateCalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OptimzationTool/OptimizationTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +29,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2O2IYK01eB2mE9FvLCeRVjMZRtD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,6 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/keiankaserman/Desktop/PSU/Spr23/SWENG431/FinalProject/NextDate/src/test/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,17 +55,21 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/test/java" />
       <recent name="$PROJECT_DIR$/src/main/java/org/example" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.RegressionTest0">
     <configuration name="DateCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NextDate" />
       <option name="PACKAGE_NAME" value="" />
@@ -74,8 +79,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegressionTest0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NextDate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RegressionTest0" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RegressionTest0" />
         <item itemvalue="JUnit.DateCalculatorTest" />
       </list>
     </recent_temporary>
@@ -91,6 +106,7 @@
       <workItem from="1680752297441" duration="1000" />
       <workItem from="1680756982069" duration="98000" />
       <workItem from="1682222325737" duration="586000" />
+      <workItem from="1682236842597" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="Create class to calculate the next date">
       <created>1680757074802</created>
@@ -119,5 +135,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create class to calculate the next date" />
     <option name="LAST_COMMIT_MESSAGE" value="Create class to calculate the next date" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/NextDate$RegressionTest0.ic" NAME="RegressionTest0 Coverage Results" MODIFIED="1682239914516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/NextDate$DateCalculatorTest.ic" NAME="DateCalculatorTest Coverage Results" MODIFIED="1682239905520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
