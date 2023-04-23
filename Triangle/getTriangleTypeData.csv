@@ -1,0 +1,11 @@
+NotATriangle,0,1,2,5
+NotATriangle,0,5,1,2
+NotATriangle,0,1,5,2
+Scalene,0,4,5,3
+NotATriangle,1,1,1,0
+NotATriangle,2,1,2,1
+NotATriangle,3,2,1,1
+Isosceles,1,1,1,2
+Isosceles,2,3,2,3
+Isosceles,3,1,2,2
+Equilateral,6,1,1,1
