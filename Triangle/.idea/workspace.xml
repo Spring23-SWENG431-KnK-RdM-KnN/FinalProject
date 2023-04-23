@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7089d910-8358-45d9-bac7-fe01bb385be2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/FinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/FinalProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/NextDate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/NextDate.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/src/DateCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/src/main/java/org/example/DateCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/src/NextDateMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/src/main/java/org/example/NextDateMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/target/classes/DateCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/target/classes/NextDateMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/target/test-classes/DateCalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/target/test-classes/DateCalculatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/test/DateCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/src/test/java/DateCalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OptimzationTool/OptimizationTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +130,7 @@
       <workItem from="1682211094074" duration="4987000" />
       <workItem from="1682216970237" duration="17000" />
       <workItem from="1682217032747" duration="4147000" />
-      <workItem from="1682222476164" duration="443000" />
+      <workItem from="1682222476164" duration="959000" />
     </task>
     <servers />
   </component>
