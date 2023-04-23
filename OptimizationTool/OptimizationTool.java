@@ -53,7 +53,7 @@ public class OptimizationTool
                         Process process = Runtime.getRuntime()
                                 .exec("java -classpath " + project +
                                         "/target/classes/:../randoop-4.3.2/randoop-all-4.3.2.jar randoop.main.Main gentests --classlist=" +
-                                        project + "/classestesting.txt --output-limit=100 --junit-output-dir=" +
+                                        project + "/classestesting.txt --output-limit=200 --junit-output-dir=" +
                                         project + "/TestCases/");
 
                         printResults(process);

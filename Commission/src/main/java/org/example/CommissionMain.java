@@ -1,3 +1,7 @@
+package org.example;
+
+import org.example.MonthSales;
+
 import java.util.Scanner;
 
 public class CommissionMain {

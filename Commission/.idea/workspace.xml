@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad66e45-16e6-4f1a-a4ed-753c9837bd30" name="Changes" comment="Format fix" />
+    <list default="true" id="9ad66e45-16e6-4f1a-a4ed-753c9837bd30" name="Changes" comment="Format fix">
+      <change afterPath="$PROJECT_DIR$/classestesting.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Commission.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Commission.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommissionMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CommissionMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MonthSales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MonthSales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CommissionMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MonthSales.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MonthSalesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MonthSalesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MonthSalesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,23 +41,54 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2O2IWjjjy9NA1o9ZVGes9xXLOkI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/keiankaserman/Desktop/PSU/Spr23/SWENG431/FinalProject/Commission",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/example" />
+      <recent name="$PROJECT_DIR$/src/test/java" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MonthSalesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Commission" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MonthSalesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MonthSalesTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +99,7 @@
       <updated>1680752285246</updated>
       <workItem from="1680752286783" duration="4000" />
       <workItem from="1680752344525" duration="2292000" />
+      <workItem from="1682228885242" duration="403000" />
     </task>
     <servers />
   </component>
@@ -75,5 +120,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Program with commission calculating class" />
     <option name="LAST_COMMIT_MESSAGE" value="Program with commission calculating class" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Commission$MonthSalesTest.ic" NAME="MonthSalesTest Coverage Results" MODIFIED="1682229190475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
