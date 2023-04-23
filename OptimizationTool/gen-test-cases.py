@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 
-def main() -> int:
+def main():
     gen_tests = subprocess.run(["java", "-classpath", "target/classes/:../randoop-4.3.2/randoop-all-4.3.2.jar",
                                 "randoop.main.Main", "gentests", "--classlist=classestesting.txt",
                                 "--output-limit=100", "--junit-output-dir=TestCases/"])
