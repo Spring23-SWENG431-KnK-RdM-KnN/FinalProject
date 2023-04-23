@@ -1,6 +1,8 @@
+package originals;
+
 import org.example.TriangleDeterminer;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class RegressionTest0 {
 

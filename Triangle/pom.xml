@@ -29,6 +29,11 @@
             <artifactId>junit-vintage-engine</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0</version>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -58,6 +63,9 @@
                         </goals>
                         <configuration>
                             <formats>CSV</formats>
+                            <outputDirectory>
+                                CoverageReports
+                            </outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
