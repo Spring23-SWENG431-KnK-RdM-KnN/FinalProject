@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a93b7125-7700-4d7d-842f-12e17d50c990" name="Changes" comment="Create class to calculate the next date" />
+    <list default="true" id="a93b7125-7700-4d7d-842f-12e17d50c990" name="Changes" comment="Create class to calculate the next date">
+      <change beforePath="$PROJECT_DIR$/../.idea/FinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/FinalProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NextDate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NextDate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DateCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DateCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NextDateMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NextDateMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DateCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NextDateMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DateCalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DateCalculatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/DateCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DateCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OptimzationTool/OptimizationTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,13 +42,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/test/java" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/example" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DateCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NextDate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DateCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DateCalculatorTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -43,6 +90,7 @@
       <updated>1680752296335</updated>
       <workItem from="1680752297441" duration="1000" />
       <workItem from="1680756982069" duration="98000" />
+      <workItem from="1682222325737" duration="586000" />
     </task>
     <task id="LOCAL-00001" summary="Create class to calculate the next date">
       <created>1680757074802</created>

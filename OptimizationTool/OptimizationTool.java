@@ -6,21 +6,22 @@ import java.io.InputStreamReader;
 public class OptimizationTool
 {
     public static void main(String[] args) {
-        String file;
+        String project;
         JFileChooser jfc = new JFileChooser();
 
         jfc.setFileSelectionMode(1);
 
         if (jfc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-            file = jfc.getSelectedFile().getAbsolutePath();
+            project = jfc.getSelectedFile().getAbsolutePath();
 
             try {
                 Process process = Runtime.getRuntime()
-                        .exec("java -classpath \"" + file + "\";%RANDOOP_JAR% randoop.main.Main gentests --testclass=TriangleDeterminer --output-limit=100 --junit-output-dir=\"C:\\Users\\GhostDuck\\Documents\\SWENG 431\\FinalProject\\Triangle\\src\\test\\java\"");
+                        .exec("java -classpath " + project +
+                                "/target/classes/:../randoop-4.3.2/randoop-all-4.3.2.jar randoop.main.Main gentests --classlist=" +
+                                project + "/classestesting.txt --output-limit=100 --junit-output-dir=" +
+                                project + "/TestCases/");
 
                 printResults(process);
-
-                String example = "java -Xmx3000m -classpath myclasspath:${RANDOOP_JAR} randoop.main.Main gentests --testclass=java.util.TreeSet --output-limit=100";
 
             } catch (Exception e) {
                 System.out.println(e);
