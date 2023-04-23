@@ -1,6 +1,7 @@
+import org.example.TriangleDeterminer;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
@@ -15,7 +16,7 @@ class TriangleDeterminerTest {
     private static final String isosc = "Isosceles";
 
     @ParameterizedTest
-    @CsvFileSource(files = "getMatchValueData.csv")
+    @MethodSource
     void getMatchValue(int exp, int a, int b, int c) {
         int res = triDet.getMatchValue(a, b, c);
         assertEquals(exp, res);
@@ -32,7 +33,7 @@ class TriangleDeterminerTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(files = "getTriangleTypeData.csv")
+    @MethodSource
     void getTriangleType(String expType, int match, int a, int b, int c) {
         String type = triDet.getTriangleType(match, a, b, c);
         assertEquals(expType, type);

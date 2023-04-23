@@ -9,8 +9,5 @@
         <module name="Triangle" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Triangle" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
