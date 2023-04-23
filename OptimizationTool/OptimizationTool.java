@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Method;
 
 public class OptimizationTool
 {
@@ -56,14 +55,14 @@ public class OptimizationTool
                     // Remove this part or comment it out if you don't want to re-generate
                     // Randoop JUnit 4 tests while testing additional functionality of GUI
                     try {
-                        Process process = Runtime.getRuntime()
+                        /*Process process = Runtime.getRuntime()
                                 .exec("java -classpath " + project +
                                         "/target/classes/:../randoop-4.3.2/randoop-all-4.3.2.jar randoop.main.Main gentests --classlist=" +
                                         project + "/classestesting.txt --output-limit=200 --junit-output-dir=" +
                                         project + "/src/test/java/");
 
-                        printResults(process);
-
+                        printResults(process);*/
+                        createTestSets();
                     } catch (Exception ex) {
                         System.out.println(ex);
                     }
@@ -130,9 +129,16 @@ public class OptimizationTool
     /**
      * Create and return sets of tests
      */
-    public Method[][] createTestSets() {
+    /*public Method[][] createTestSets() {
         // Need to import the RegressionTest0 class from whichever project
+        try {
+            Process process = Runtime.getRuntime()
+                    .exec("mvn clean test -Dtest=\"RegressionTest0#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010\"");
 
+            printResults(process);
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
         RegressionTest0 testSuite = new RegressionTest0();
         Class c = testSuite.getClass();
         Method tests[] = c.getDeclaredMethods();
@@ -144,6 +150,19 @@ public class OptimizationTool
             }
         }
         return testSets;
-    }
+    }*/
 
+    /**
+     * Void version of createTestSets for debugging purposes
+     */
+    public void createTestSets() {
+        try {
+            Process process = Runtime.getRuntime()
+                    .exec("mvn clean test -Dtest=\"RegressionTest0#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010\"");
+
+            printResults(process);
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+    }
 }
