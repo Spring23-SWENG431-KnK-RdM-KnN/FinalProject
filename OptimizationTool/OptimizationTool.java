@@ -54,7 +54,7 @@ public class OptimizationTool
                                 .exec("java -classpath " + project +
                                         "/target/classes/:../randoop-4.3.2/randoop-all-4.3.2.jar randoop.main.Main gentests --classlist=" +
                                         project + "/classestesting.txt --output-limit=200 --junit-output-dir=" +
-                                        project + "/TestCases/");
+                                        project + "/src/test/java/");
 
                         printResults(process);
 
