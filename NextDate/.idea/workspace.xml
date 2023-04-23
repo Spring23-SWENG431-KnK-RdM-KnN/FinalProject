@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a93b7125-7700-4d7d-842f-12e17d50c990" name="Changes" comment="Create class to calculate the next date">
-      <change beforePath="$PROJECT_DIR$/../.idea/FinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/FinalProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Triangle/src/test/java/RegressionTest0.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NextDate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NextDate.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DateCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DateCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NextDateMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NextDateMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DateCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NextDateMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DateCalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DateCalculatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/DateCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DateCalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OptimzationTool/OptimizationTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/RegressionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/TestCases/RegressionTest0.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/TestCases/RegressionTest0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/TestCases/RegressionTest1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/gen-coverage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/gen-test-cases.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/target/Triangle-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +44,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -91,6 +93,7 @@
       <workItem from="1680752297441" duration="1000" />
       <workItem from="1680756982069" duration="98000" />
       <workItem from="1682222325737" duration="586000" />
+      <workItem from="1682236842597" duration="1211000" />
     </task>
     <task id="LOCAL-00001" summary="Create class to calculate the next date">
       <created>1680757074802</created>
