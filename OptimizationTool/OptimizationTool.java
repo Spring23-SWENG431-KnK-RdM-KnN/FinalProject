@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -157,8 +158,13 @@ public class OptimizationTool
      */
     public void createTestSets() {
         try {
-            Process process = Runtime.getRuntime()
-                    .exec("mvn clean test -Dtest=\"RegressionTest0#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010\"");
+
+            String[] command = {"mvn", "clean", "test", "-Dtest=RegressionTest#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010"};
+            String[] altcmd2 = {"mvn", "clean", "test", "-Dtest=RegressionTest"};
+            String[] altcmd = {"mvn", "clean", "test"};
+            ProcessBuilder builder = new ProcessBuilder(command);
+            builder = builder.directory(new File(project));
+            Process process = builder.start();
 
             printResults(process);
         } catch (Exception ex) {
