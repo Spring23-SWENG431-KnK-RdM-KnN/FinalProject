@@ -3,10 +3,12 @@ import javax.swing.text.DefaultCaret;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class OptimizationTool
 {
@@ -21,6 +23,7 @@ public class OptimizationTool
     private JButton geneticStartButton;
     String project;
     String[][] projectTestcases;
+    Map<String, Map> tournamentResults;
 
     /**
      * Pattern taken from: https://www.tutorialspoint.com/how-to-add-action-listener-to-jbutton-in-java
@@ -243,6 +246,7 @@ public class OptimizationTool
      * Runs tests in sets of 10 at a time
      */
     public void runTestSets() {
+        // Ensure we have a list of test cases
         if (projectTestcases == null) {
             createTestSets();
         }
@@ -250,6 +254,7 @@ public class OptimizationTool
         String testCasesFile = "-Dtest=RegressionTest#";
         String testCasesTargeted;
         try {
+            // Name test cases to run
             for (int i = 0; i < projectTestcases.length; i++) {
                 testCasesTargeted = testCasesFile;
                 for (int j = 0; j < projectTestcases[i].length; j++) {
@@ -279,9 +284,99 @@ public class OptimizationTool
                 printResults(process);
 
                 renameCoverageFiles(i);
+
+                // Start genetic processing by narrowing
+                // down test suites to mutate
+                doTournament();
+                //
+                doCrossover();
             }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void storeRelevantCovgStats() {
+        // Get number of files to analyze
+        String covgDirName = project + "CoverageReports";
+        File covgDir = new File(covgDirName);
+        File[] covgFiles = covgDir.listFiles();
+
+        // Store instruction and line coverage stats
+        Map<String, Map> testSuiteResults = new HashMap<>();
+        if (covgFiles.length > 0) {
+            // Get coverage data for each test suite
+            for (int i = 0; i < covgFiles.length; i++) {
+                if (covgFiles[i].isFile()) {
+                    try {
+                        // read data from coverage file
+                        // Modified from example here: https://stackabuse.com/reading-and-writing-csvs-in-java/
+                        BufferedReader reader = new BufferedReader(new FileReader(covgFiles[i]));
+                        String row;
+                        Map<String, Integer> testSuiteData = new HashMap<>();
+                        int rowNum = 0;
+                        while ((row = reader.readLine()) != null) {
+                            if (rowNum > 0) {
+                                String[] data = row.split(",");
+                                // Store line and block coverage numbers for comparison
+                                // Instructions missed
+                                testSuiteData.put("IMissed", Integer.parseInt(data[4]));
+                                // Instructions covered
+                                testSuiteData.put("ICovered", Integer.parseInt(data[5]));
+                                // Lines missed
+                                testSuiteData.put("LMissed", Integer.parseInt(data[8]));
+                                // Lines covered
+                                testSuiteData.put("LCovered", Integer.parseInt(data[9]));
+                            }
+                            testSuiteResults.put("testSuite" + i, testSuiteData);
+                            rowNum++;
+                        }
+                        reader.close();
+                    } catch (FileNotFoundException e) {
+                        throw new RuntimeException(e);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            }
+        }
+    }
+
+
+    /**
+     * Performs tournament style selection of test suites to narrow
+     * down optimization of test cases selected.
+     */
+    public void doTournament() {
+        storeRelevantCovgStats();
+
+
+
+
+        // Compare coverage
+        // Below is modified from example here: https://www.digitalocean.com/community/tutorials/sort-hashmap-by-value-java
+        // Allows access of nested Map to sort by it's values
+        Comparator<Map> byLineCoverage = Comparator.comparingInt((Map val) -> (Integer) val.get("LCovered"));
+        // Sort top level map by nested map's values using comparator above
+        tournamentResults =
+                testSuiteResults.entrySet().stream()
+                        .sorted(Map.Entry.comparingByValue(byLineCoverage))
+                        // Below is adapted from an answer to this post:
+                        // https://stackoverflow.com/questions/109383/sort-a-mapkey-value-by-values
+                        .limit(4)
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, HashMap::new));
+        }
+    }
+
+
+    /**
+     * Performs mutation of test suites
+     * by cross-breeding them to test for
+     * most efficient combination.
+     */
+    private void doCrossover() {
+        // Turn individual test cases
+        // into binary digits
     }
 }
