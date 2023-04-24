@@ -160,9 +160,9 @@ public class OptimizationTool
         try {
 
             String[] command = {"mvn", "clean", "test", "-Dtest=RegressionTest#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010"};
-            String[] altcmd2 = {"mvn", "clean", "test", "-Dtest=RegressionTest"};
             String[] altcmd = {"mvn", "clean", "test"};
-            ProcessBuilder builder = new ProcessBuilder(command);
+            String[] altcmd2 = {"mvn", "clean", "test", "-Dtest=RegressionTest"};
+            ProcessBuilder builder = new ProcessBuilder(altcmd);
             builder = builder.directory(new File(project));
             Process process = builder.start();
 
