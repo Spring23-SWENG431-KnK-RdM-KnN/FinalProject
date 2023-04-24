@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad66e45-16e6-4f1a-a4ed-753c9837bd30" name="Changes" comment="Format fix">
-      <change afterPath="$PROJECT_DIR$/../NextDate/src/test/java/RegressionTest0.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commission.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Commission.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RegressionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NextDate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/NextDate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/NextDate.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/TestCases/RegressionTest0.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/TestCases/RegressionTest0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/src/test/java/RegressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/src/test/java/RegressionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/jacoco.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,19 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/keiankaserman/Desktop/PSU/Spr23/SWENG431/FinalProject/Commission",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/keiankaserman/Desktop/PSU/Spr23/SWENG431/FinalProject/Commission&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/org/example" />
@@ -110,6 +108,7 @@
       <workItem from="1680752344525" duration="2292000" />
       <workItem from="1682228885242" duration="403000" />
       <workItem from="1682239986387" duration="223000" />
+      <workItem from="1682318655399" duration="309000" />
     </task>
     <servers />
   </component>
