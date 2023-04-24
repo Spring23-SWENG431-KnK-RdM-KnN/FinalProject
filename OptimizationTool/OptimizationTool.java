@@ -250,20 +250,6 @@ public class OptimizationTool
         String testCasesFile = "-Dtest=RegressionTest#";
         String testCasesTargeted;
         try {
-<<<<<<< HEAD
-            String[] command;
-            String os = System.getProperty("os.name");
-            if (os.contains("Windows")) {
-                command = new String[]{"mvn.cmd", "clean", "test", "-Dtest=RegressionTest#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010"};
-            }
-            else {
-                command = new String[]{"mvn", "clean", "test", "-Dtest=RegressionTest#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010"};
-            }
-            ProcessBuilder builder = new ProcessBuilder(command);
-            builder = builder.directory(new File(project));
-            Process process = builder.start();
-            printResults(process);
-=======
             for (int i = 0; i < projectTestcases.length; i++) {
                 testCasesTargeted = testCasesFile;
                 for (int j = 0; j < projectTestcases[i].length; j++) {
@@ -294,7 +280,6 @@ public class OptimizationTool
 
                 renameCoverageFiles(i);
             }
->>>>>>> 6ba5d5d (Add GUI functionality for processing test cases and generating JUnit tests)
         } catch (Exception ex) {
             ex.printStackTrace();
         }
