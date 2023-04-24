@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class RegressionTest0 {
+public class RegressionTest {
 
     public static boolean debug = false;
 

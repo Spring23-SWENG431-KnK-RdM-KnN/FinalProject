@@ -158,17 +158,20 @@ public class OptimizationTool
      */
     public void createTestSets() {
         try {
-
-            String[] command = {"mvn", "clean", "test", "-Dtest=RegressionTest#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010"};
-            String[] altcmd = {"mvn", "clean", "test"};
-            String[] altcmd2 = {"mvn", "clean", "test", "-Dtest=RegressionTest"};
-            ProcessBuilder builder = new ProcessBuilder(altcmd);
+            String[] command;
+            String os = System.getProperty("os.name");
+            if (os.contains("Windows")) {
+                command = new String[]{"mvn.cmd", "clean", "test", "-Dtest=RegressionTest#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010"};
+            }
+            else {
+                command = new String[]{"mvn", "clean", "test", "-Dtest=RegressionTest#test001+test002+test003+test004+test005+test006+test007+test008+test009+test010"};
+            }
+            ProcessBuilder builder = new ProcessBuilder(command);
             builder = builder.directory(new File(project));
             Process process = builder.start();
-
             printResults(process);
         } catch (Exception ex) {
-            System.out.println(ex);
+            ex.printStackTrace();
         }
     }
 }
