@@ -1,10 +1,8 @@
 package org.example;
 
-import org.example.MonthSales;
-
 import java.util.Scanner;
 
-public class CommissionMain {
+public class Main {
 
     public static void main(String[] args) {
         Scanner inputGetter = new Scanner(System.in);

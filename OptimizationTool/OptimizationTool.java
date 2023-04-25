@@ -4,14 +4,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.ArrayList;
 
 public class OptimizationTool
 {
+    /**
+     * GUI component variables
+     */
     private String appName = "Genetic Optimization Tool";
     private JFrame guiFrame = new JFrame(appName);;
     private Container mainPane;
@@ -21,9 +20,16 @@ public class OptimizationTool
     private JButton chooseProjectButton;
     private JButton jUnitTestsButton;
     private JButton geneticStartButton;
+    /**
+     * Code logic variables.
+     */
+    private Population testPop;
+    private int tsSize = 60;
+    private int popSize = 10;
+    private int tournamentSize = popSize / 3;
     String project;
-    String[][] projectTestcases;
-    Map<String, Map> tournamentResults;
+    private int minimumAcceptableCoverage = 90;
+    private boolean hasMutated;
 
     /**
      * Pattern taken from: https://www.tutorialspoint.com/how-to-add-action-listener-to-jbutton-in-java
@@ -70,7 +76,7 @@ public class OptimizationTool
                 }
                 File f = new File(project+"/src/test/java/RegressionTest.java");
                 if(f.exists()) {
-                    jUnitTestsButton.setEnabled(false);
+                    jUnitTestsButton.setEnabled(true);
                     geneticStartButton.setEnabled(true);
                 }
             }
@@ -86,9 +92,9 @@ public class OptimizationTool
                         Process process = Runtime.getRuntime()
                                 .exec("java -classpath " + project +
                                         "/target/classes/:../randoop-4.3.2/randoop-all-4.3.2.jar randoop.main.Main gentests --classlist=" +
-                                        project + "/classestesting.txt --output-limit=200 --junit-output-dir=" +
+                                        project + "/classestesting.txt --output-limit=500 --junit-output-dir=" +
                                         project + "/src/test/java/");
-                        fixFileNames();
+                        fixJUnitFileNames();
                         geneticStartButton.setEnabled(true);
                     } catch (Exception ex) {
                         System.out.println(ex);
@@ -104,7 +110,9 @@ public class OptimizationTool
             public void actionPerformed(ActionEvent e) {
                 if (project != null) {
                     try {
-                        runTestSets();
+                        output.append("Running Genetic Test Generation\n");
+                        TestSuite bestTS = runGeneticTestSuiteGeneration();
+                        output.append("\n" + bestTS.toString());
                     } catch (Exception ex) {
                         System.out.println(ex);
                     }
@@ -175,22 +183,23 @@ public class OptimizationTool
     /**
      * Fixes file naming for generated test files
      */
-    public void fixFileNames() {
-        String originalFileName = "RegressionTest0.java";
-        String targetFileName = "RegressionTest.java";
+    public void fixJUnitFileNames() {
+        String originalFileName = "/RegressionTest0.java";
+        String targetFileName = "/RegressionTest.java";
         String[] removeBadFile = {"rm", project+targetFileName};
         String[] renameFile = {"mv", project+originalFileName, project+targetFileName};
-        // Remove JUnit 4 style runner class
-        ProcessBuilder builder = new ProcessBuilder(removeBadFile);
-        builder.inheritIO(); // Ensure thread isn't blocked on I/O
-        builder.redirectErrorStream(true); // Mash error and stdout together
-        builder = builder.directory(new File(project));
         try {
+            // Remove JUnit 4 style runner class
+            ProcessBuilder builder = new ProcessBuilder(removeBadFile);
+            //builder.inheritIO(); // Ensure thread isn't blocked on I/O
+            builder.redirectErrorStream(true); // Mash error and stdout together
+            builder = builder.directory(new File(project));
             Process process = builder.start();
             printResults(process);
+
             // Rename to filename needed for test running.
             builder = new ProcessBuilder(renameFile);
-            builder.inheritIO(); // Ensure thread isn't blocked on I/O
+            //builder.inheritIO(); // Ensure thread isn't blocked on I/O
             builder.redirectErrorStream(true); // Mash error and stdout together
             builder = builder.directory(new File(project));
             process = builder.start();
@@ -203,180 +212,150 @@ public class OptimizationTool
     /** Creates the set of tests to perform tournament
      * style genetic selection from.
      */
-    public void createTestSets() {
-        projectTestcases = new String[10][10];
-        String baseTestName = "test";
-        String zero = "0";
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++){
-                String currTestName = baseTestName;
-                if (i == 0) {
-                    currTestName += zero + zero;
-                    currTestName += j+1;
-                } else {
-                    currTestName += zero;
-                    currTestName += i*10+j+1;
-                }
-                projectTestcases[i][j] = currTestName;
-            }
+    public void createInitialPopulation() {
+        ArrayList<TestSuite> ats = new ArrayList<TestSuite>();
+        for (int i = 0; i < popSize; i++) {
+            TestSuite ts = new TestSuite(i, tsSize, project);
+            ats.add(ts);
         }
+        testPop = new Population(ats);
     }
 
     /**
-     * Renames coverage file generated, then
-     * copies it to directory holding coverage files.
+     * Finds the best test suite based on coverage
+     * percentage
+     *
+     * @return
      */
-    private void renameCoverageFiles(int testSetNumber) throws Exception {
-        String directory = "/CoverageReports/";
-        String originalName = directory + "jacoco.csv";
-        String baseTargetName = directory + "testSet" + testSetNumber + ".csv";
-        String[] renameFileAndMove = {"mv", project+originalName, project+baseTargetName};
-        // Rename coverage file and move to right directory
-        ProcessBuilder builder = new ProcessBuilder(renameFileAndMove);
-        builder.inheritIO(); // Ensure thread isn't blocked on I/O
-        builder.redirectErrorStream(true); // Mash error and stdout together
-        builder = builder.directory(new File(project));
-        builder.redirectErrorStream(true);
-        Process process = builder.start();
-        process.waitFor();
-        printResults(process);
-    }
-
-    /**
-     * Runs tests in sets of 10 at a time
-     */
-    public void runTestSets() {
+    public TestSuite runGeneticTestSuiteGeneration() {
         // Ensure we have a list of test cases
-        if (projectTestcases == null) {
-            createTestSets();
+        if (testPop == null) {
+            createInitialPopulation();
         }
 
-        String testCasesFile = "-Dtest=RegressionTest#";
-        String testCasesTargeted;
+        int generationCount = 0;
+        while (testPop.getBestTestSuite().getFitness() < getMinCovg()) {
+            System.out.println(
+                    "Generation: " + generationCount
+                            + " Coverage percentage: " + testPop.getBestTestSuite().getFitness());
+            testPop = evolvePopulation(testPop);
+            generationCount++;
+        }
+
+        TestSuite bestTs = testPop.getBestTestSuite();
+        testPop = null;
+        return bestTs;
+    }
+
+    /**
+     * Create a new population of test suites
+     * @param testPop population to evolve from
+     * @return
+     */
+    private Population evolvePopulation(Population testPop) {
+        Population evolvedPopulation = new Population(popSize);
+        evolvedPopulation.addTestSuite(testPop.getBestTestSuite());
         try {
             // Name test cases to run
-            for (int i = 0; i < projectTestcases.length; i++) {
-                testCasesTargeted = testCasesFile;
-                for (int j = 0; j < projectTestcases[i].length; j++) {
-                    if (j != 0) {
-                        testCasesTargeted += "+" + projectTestcases[i][j];
-                    } else {
-                        testCasesTargeted += projectTestcases[i][j];
-                    }
-                }
-
-                String[] runTests;
-                String os = System.getProperty("os.name");
-                // Ensure test generation works on Windows and not
-                if (os.contains("Windows")) {
-                    runTests = new String[]{"mvn.cmd", "clean", "test", testCasesTargeted};
-                }
-                else {
-                    runTests = new String[]{"mvn", "clean", "test", testCasesTargeted};;
-                }
-                // Build and run the process
-                ProcessBuilder builder = new ProcessBuilder(runTests);
-                builder.inheritIO(); // Ensure thread isn't blocked on I/O
-                builder.redirectErrorStream(true); // Mash error and stdout together
-                builder = builder.directory(new File(project));
-                Process process = builder.start();
-                process.waitFor();
-                printResults(process);
-
-                renameCoverageFiles(i);
-
+            for (int i = 1; i < popSize; i++) {
                 // Start genetic processing by narrowing
-                // down test suites to mutate
-                doTournament();
-                //
-                doCrossover();
+                // down to 2 test suites to mutate
+                TestSuite fittestTS1 = doTournament(testPop);
+                TestSuite fittestTS2 = doTournament(testPop);
+                // Cross-breed the two fittest test suites
+                // to try to find a better test suite
+                TestSuite newTS = doCrossover(i, fittestTS1, fittestTS2);
+                evolvedPopulation.addTestSuite(newTS);
+                if (i % 3 == 0) {
+                    // Ensure 33% mutation
+                    int mutationTsIndex = genRandomInt(0, evolvedPopulation.getPopulationSize()-1);
+                    mutate(evolvedPopulation.getIndividualTestSuite(mutationTsIndex));
+                }
             }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }
-
-    public void storeRelevantCovgStats() {
-        // Get number of files to analyze
-        String covgDirName = project + "CoverageReports";
-        File covgDir = new File(covgDirName);
-        File[] covgFiles = covgDir.listFiles();
-
-        // Store instruction and line coverage stats
-        Map<String, Map> testSuiteResults = new HashMap<>();
-        if (covgFiles.length > 0) {
-            // Get coverage data for each test suite
-            for (int i = 0; i < covgFiles.length; i++) {
-                if (covgFiles[i].isFile()) {
-                    try {
-                        // read data from coverage file
-                        // Modified from example here: https://stackabuse.com/reading-and-writing-csvs-in-java/
-                        BufferedReader reader = new BufferedReader(new FileReader(covgFiles[i]));
-                        String row;
-                        Map<String, Integer> testSuiteData = new HashMap<>();
-                        int rowNum = 0;
-                        while ((row = reader.readLine()) != null) {
-                            if (rowNum > 0) {
-                                String[] data = row.split(",");
-                                // Store line and block coverage numbers for comparison
-                                // Instructions missed
-                                testSuiteData.put("IMissed", Integer.parseInt(data[4]));
-                                // Instructions covered
-                                testSuiteData.put("ICovered", Integer.parseInt(data[5]));
-                                // Lines missed
-                                testSuiteData.put("LMissed", Integer.parseInt(data[8]));
-                                // Lines covered
-                                testSuiteData.put("LCovered", Integer.parseInt(data[9]));
-                            }
-                            testSuiteResults.put("testSuite" + i, testSuiteData);
-                            rowNum++;
-                        }
-                        reader.close();
-                    } catch (FileNotFoundException e) {
-                        throw new RuntimeException(e);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-            }
-        }
+        return evolvedPopulation;
     }
 
 
     /**
      * Performs tournament style selection of test suites to narrow
      * down optimization of test cases selected.
+     *
+     * Code is modified from example given here:
+     * https://www.baeldung.com/java-genetic-algorithm
      */
-    public void doTournament() {
-        storeRelevantCovgStats();
-
-
-
-
-        // Compare coverage
-        // Below is modified from example here: https://www.digitalocean.com/community/tutorials/sort-hashmap-by-value-java
-        // Allows access of nested Map to sort by it's values
-        Comparator<Map> byLineCoverage = Comparator.comparingInt((Map val) -> (Integer) val.get("LCovered"));
-        // Sort top level map by nested map's values using comparator above
-        tournamentResults =
-                testSuiteResults.entrySet().stream()
-                        .sorted(Map.Entry.comparingByValue(byLineCoverage))
-                        // Below is adapted from an answer to this post:
-                        // https://stackoverflow.com/questions/109383/sort-a-mapkey-value-by-values
-                        .limit(4)
-                        .collect(Collectors.toMap(
-                                Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, HashMap::new));
+    public TestSuite doTournament(Population testPop) {
+        Population tournament = new Population(tournamentSize);
+        for (int i = 0; i < tournamentSize; i++) {
+            int randomId = (int) (Math.random() * testPop.getPopulationSize());
+            tournament.addTestSuite(testPop.getIndividualTestSuite(randomId));
         }
+        TestSuite bestTestSuite = tournament.getBestTestSuite();
+        return bestTestSuite;
     }
-
 
     /**
      * Performs mutation of test suites
      * by cross-breeding them to test for
      * most efficient combination.
+     *
+     * Code is modified from example given here:
+     * https://www.baeldung.com/java-genetic-algorithm
      */
-    private void doCrossover() {
+    private TestSuite doCrossover(int tsID, TestSuite ts1, TestSuite ts2) {
         // Turn individual test cases
-        // into binary digits
+        // into binary digits to pick randomly
+        // from.
+        int pivot = genRandomInt(0, 100);
+        TestSuite newSuite = new TestSuite(tsID, tsSize, project);
+        for (int i = 0; i < tsSize; i++) {
+            if (genRandomInt(0, 100) <= pivot) { // Take test case from first test suite
+                newSuite.setIndividualTestCase(i, ts1.getIndividualTestCase(i));
+            } else { // Take test case from second test suite
+                newSuite.setIndividualTestCase(i, ts2.getIndividualTestCase(i));
+            }
+        }
+        return newSuite;
+    }
+
+    /**
+     * Randomly choose a test case from all possible
+     * and insert it into a random test case
+     * @param ts the test suite to mutate
+     */
+    public void mutate(TestSuite ts) {
+        int pivot = genRandomInt(0, 100);
+        boolean mutated = false;
+        while (!mutated) {
+            if (genRandomInt(0, 100) <= pivot) {
+                // Get random test suite to get test case from
+                TestSuite randomTs = testPop.getIndividualTestSuite(genRandomInt(0, testPop.getPopulationSize()-1));
+                int i = genRandomInt(0, randomTs.getTestSuiteSize());
+                // Grab random test case from random test suite
+                String gene = randomTs.getIndividualTestCase(genRandomInt(0, randomTs.getTestSuiteSize()-1));
+                // Insert random test case at random point in test suite
+                ts.setIndividualTestCase(i, gene);
+                mutated = true;
+            }
+        }
+    }
+
+    /**
+     * Flexible generation of random integers
+     * @param min smallest int value desired
+     * @param max largest int value desired
+     * @return
+     */
+    private int genRandomInt(int min, int max) {
+        return (min + (int) (Math.random() * ((max - min) + 1)));
+    }
+
+    /**
+     * Solution we want from algorithm.
+     */
+    public int getMinCovg() {
+        return minimumAcceptableCoverage;
     }
 }

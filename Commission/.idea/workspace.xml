@@ -5,14 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad66e45-16e6-4f1a-a4ed-753c9837bd30" name="Changes" comment="Format fix">
+      <change afterPath="$PROJECT_DIR$/../OptimizationTool/Population.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OptimizationTool/TestSuite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RegressionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/jacoco.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoverageReports/testSet9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CoverageReports/testSet9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CommissionMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NextDate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/TestCases/RegressionTest0.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/TestCases/RegressionTest0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextDate/src/test/java/RegressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/src/test/java/RegressionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/jacoco.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/CoverageReports/testSet9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/NextDate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/NextDate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/src/main/java/org/example/NextDateMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NextDate/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextDate/src/test/java/RegressionTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OptimizationTool/OptimizationTool.java.orig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/jacoco.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/CoverageReports/testSet9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Triangle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Triangle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +107,20 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RegressionTest0">
+  <component name="RunManager" selected="JUnit.RegressionTest">
     <configuration name="MonthSalesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Commission" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MonthSalesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegressionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Commission" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RegressionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,6 +137,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RegressionTest" />
         <item itemvalue="JUnit.RegressionTest0" />
         <item itemvalue="JUnit.MonthSalesTest" />
       </list>
@@ -109,6 +156,7 @@
       <workItem from="1682228885242" duration="403000" />
       <workItem from="1682239986387" duration="223000" />
       <workItem from="1682318655399" duration="309000" />
+      <workItem from="1682385030558" duration="2350000" />
     </task>
     <servers />
   </component>
@@ -133,5 +181,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Commission$MonthSalesTest.ic" NAME="MonthSalesTest Coverage Results" MODIFIED="1682240184499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Commission$RegressionTest0.ic" NAME="RegressionTest0 Coverage Results" MODIFIED="1682240196282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Commission$RegressionTest.ic" NAME="RegressionTest Coverage Results" MODIFIED="1682391796480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

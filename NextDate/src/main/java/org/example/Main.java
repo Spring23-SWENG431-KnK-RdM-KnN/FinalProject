@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Code adapted with little change from pseudocode in book "Software Testing" Chapter 2
  */
-public class NextDateMain {
+public class Main {
     public static void main(String[] args) {
         int day, month ,year;
         boolean c1, c2, c3;
