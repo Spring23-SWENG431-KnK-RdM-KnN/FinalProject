@@ -90,11 +90,12 @@ public class OptimizationTool
                 if (project != null) {
                     try {
                         Process process = Runtime.getRuntime()
-                                .exec("java -classpath " + project +
-                                        "/target/classes/:../randoop-4.3.2/randoop-all-4.3.2.jar randoop.main.Main gentests --classlist=" +
-                                        project + "/classestesting.txt --output-limit=500 --junit-output-dir=" +
-                                        project + "/src/test/java/");
+                                .exec("java -classpath \"" + project +
+                                        "/target/classes\";\"randoop-4.3.2/randoop-all-4.3.2.jar\" randoop.main.Main gentests --classlist=\"" +
+                                        project + "/classestesting.txt\" --output-limit=100 --junit-output-dir=\"" +
+                                        project + "/src/test/java\"");
                         fixJUnitFileNames();
+                        printResults(process);
                         geneticStartButton.setEnabled(true);
                     } catch (Exception ex) {
                         System.out.println(ex);
@@ -184,10 +185,19 @@ public class OptimizationTool
      * Fixes file naming for generated test files
      */
     public void fixJUnitFileNames() {
-        String originalFileName = "/RegressionTest0.java";
-        String targetFileName = "/RegressionTest.java";
-        String[] removeBadFile = {"rm", project+targetFileName};
-        String[] renameFile = {"mv", project+originalFileName, project+targetFileName};
+        String os = System.getProperty("os.name");
+        String originalFileName = "\\RegressionTest0.java";
+        String targetFileName = "\\RegressionTest.java";
+        String[] removeBadFile;
+        String[] renameFile;
+        if (os.contains("Windows")) {
+            removeBadFile = new String[]{"cmd.exe", "/c", "del \"" + project + "\\src\\test\\java" + targetFileName + "\""};
+            renameFile = new String[]{"cmd.exe", "/c", "move \"" + project + "\\src\\test\\java" + originalFileName + "\"", "move \"" + project + "\\src\\test\\java" + targetFileName + "\""};
+        }
+        else {
+            removeBadFile = new String[]{"rm", project + targetFileName};
+            renameFile = new String[]{"mv", project + originalFileName, project + targetFileName};
+        }
         try {
             // Remove JUnit 4 style runner class
             ProcessBuilder builder = new ProcessBuilder(removeBadFile);

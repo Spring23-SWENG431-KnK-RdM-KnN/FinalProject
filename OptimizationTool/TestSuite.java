@@ -18,6 +18,7 @@ public class TestSuite {
     private int tsID;
     private String covgFile;
     private Pattern ignoreTestStatsLines;
+    private String os;
 
     public TestSuite(int tsID, int size, String project) {
         this.size = size;
@@ -77,13 +78,13 @@ public class TestSuite {
                 testCasesTargeted += testCases.get(i);
             }
         }
-        String os = System.getProperty("os.name");
+        os = System.getProperty("os.name");
         // Ensure test generation works on Windows and not
         if (os.contains("Windows")) {
             mvnCommand = new String[]{"mvn.cmd", "clean", "test", testCasesTargeted};
         }
         else {
-            mvnCommand = new String[]{"mvn", "clean", "test", testCasesTargeted};;
+            mvnCommand = new String[]{"mvn", "clean", "test", testCasesTargeted};
         }
     }
 
@@ -113,7 +114,13 @@ public class TestSuite {
         String directory = "/CoverageReports/";
         String originalName = directory + "jacoco.csv";
         covgFile = directory + "testSet" + testSetNumber + ".csv";
-        String[] renameFileAndMove = {"mv", project+originalName, project+covgFile};
+        String[] renameFileAndMove;
+        if (os.contains("Windows")) {
+            renameFileAndMove = new String[]{"cmd.exe", "/c", "move \"" + project + originalName + "\"", "move \"" + project + covgFile + "\""};
+        }
+        else {
+            renameFileAndMove = new String[]{"mv", project + originalName, project + covgFile};
+        }
         try {
             // Rename coverage file and move to right directory
             ProcessBuilder builder = new ProcessBuilder(renameFileAndMove);
