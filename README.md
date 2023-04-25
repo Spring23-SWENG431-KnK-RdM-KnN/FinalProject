@@ -6,7 +6,7 @@
 - Triangle: java program computing the type of triangle based on side lengths.
 
 > These 3 problems and their pseudocode can be viewed in Module 2 Part II on Canvas or the book "Software Testing", starting with the [Triangle problem](https://psu.instructure.com/courses/2243925/pages/m2-partii-dot-2-unit-testing-illustration-1-the-triangle-problem?module_item_id=37158618)
-### To Do (11/33 complete):
+### To Do (20/33 complete):
 
 - [X] Create Triangle program
 - [X] Create NextDate program
@@ -19,15 +19,15 @@
 - [X] Compute the coverage with JaCoCo Triangle
 - [X] Compute the coverage with JaCoCo Commission
 - [X] Compute the coverage with JaCoCo NextDate
-- [ ] Create Genetic Algorithm Fitness Function: Tournament
-- [ ] Create Genetic Algorithm Fitness Function: Crossover (breed)
-- [ ] Create tool to minimize test cases based on similarity metrics and optimization algorithm
-- [ ] Create function to take in csv test cases and split them into sets
-- [ ] Run genetic algorithm to find best 5 sets and crossbreed them for best coverage
-- [ ] Apply the created tool to generate new test data and test cases for Triangle
-- [ ] Apply the created tool to generate new test data and test cases for Commission
-- [ ] Apply the created tool to generate new test data and test cases for NextDate
-- [ ] Execute generated test cases and calculate coverage
+- [X] Create Genetic Algorithm Fitness Function: Tournament
+- [X] Create Genetic Algorithm Fitness Function: Crossover (breed)
+- [X] Create tool to minimize test cases based on optimization algorithm
+- [X] Create function to take in csv test cases and split them into sets
+- [X] Run genetic algorithm to find best 2 sets and crossbreed them for best coverage
+- [x] Apply the created tool to generate new test data and test cases for Triangle
+- [X] Apply the created tool to generate new test data and test cases for Commission
+- [X] Apply the created tool to generate new test data and test cases for NextDate
+- [X] Execute generated test cases and calculate coverage
 - [ ] Use metrics to write report results
 - [ ] Create graph and figures to display results
 - [ ] Write Abstract 200-250 words
