@@ -24,11 +24,11 @@ public class OptimizationTool
      * Code logic variables.
      */
     private Population testPop;
-    private int tsSize = 60;
+    private int tsSize = 30;
     private int popSize = 10;
     private int tournamentSize = popSize / 3;
     String project;
-    private int minimumAcceptableCoverage = 90;
+    private int minimumAcceptableCoverage = 30;
 
     /**
      * Pattern taken from: https://www.tutorialspoint.com/how-to-add-action-listener-to-jbutton-in-java
@@ -110,7 +110,7 @@ public class OptimizationTool
             public void actionPerformed(ActionEvent e) {
                 if (project != null) {
                     try {
-                        output.append("Running Genetic Test Generation\n");
+                        output.append("\nRunning Genetic Test Generation\n");
                         TestSuite bestTS = runGeneticTestSuiteGeneration();
                         output.append("\n" + bestTS.toString());
                     } catch (Exception ex) {
@@ -252,6 +252,7 @@ public class OptimizationTool
         }
 
         TestSuite bestTs = testPop.getBestTestSuite();
+        output.append("\nGeneration: " + generationCount);
         testPop = null;
         return bestTs;
     }

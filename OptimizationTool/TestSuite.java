@@ -176,6 +176,6 @@ public class TestSuite {
 
     @Override
     public String toString() {
-        return "Coverage Percentage: " + covgPercentage + "%\n\n" + testCases.toString();
+        return "\nTest Suite ID: " + tsID + "\nCoverage Percentage: " + covgPercentage + "%\n\n" + testCases.toString();
     }
 }
