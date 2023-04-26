@@ -20,6 +20,8 @@ public class OptimizationTool
     private JButton chooseProjectButton;
     private JButton jUnitTestsButton;
     private JButton geneticStartButton;
+    private JComboBox maxGenList;
+    private JSpinner minCovgSpinner;
     /**
      * Code logic variables.
      */
@@ -28,7 +30,8 @@ public class OptimizationTool
     private int popSize = 10;
     private int tournamentSize = popSize / 3;
     String project;
-    private int minimumAcceptableCoverage = 30;
+    private int minimumAcceptableCoverage = 100;
+    private int maxGenerations;
 
     /**
      * Pattern taken from: https://www.tutorialspoint.com/how-to-add-action-listener-to-jbutton-in-java
@@ -55,10 +58,36 @@ public class OptimizationTool
         jUnitTestsButton.setMinimumSize(new Dimension(76, 42));
         jUnitTestsButton.setEnabled(false);
 
-        geneticStartButton = new JButton("Start Genetic Test Creation");
+        geneticStartButton = new JButton("Start Genetic Test Selection");
         geneticStartButton.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 16));
         geneticStartButton.setMinimumSize(new Dimension(76, 42));
         geneticStartButton.setEnabled(false);
+
+        /**
+         * Allow selection of max number of generations to attempt to find
+         * a solution in.
+         */
+        JLabel maxGenLabel = new JLabel("Select Max Generation");
+        String[] gen = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"};
+        maxGenList = new JComboBox(gen);
+        maxGenList.setSelectedIndex(5);
+        maxGenList.setMinimumSize(new Dimension(70, 70));
+        maxGenList.setMaximumSize(new Dimension(70, 70));
+
+        /**
+         * Allow selection of minimum acceptable coverage desired
+         */
+        JLabel minCovgLabel = new JLabel("Select Minimum Coverage");
+        SpinnerNumberModel minCovgModel;
+        int current = 30;
+        int min = 0;
+        int max = 100;
+        int step = 1;
+        minCovgModel = new SpinnerNumberModel(current, min, max, step);
+        minCovgSpinner = new JSpinner(minCovgModel);
+        minCovgSpinner.setMinimumSize(new Dimension(70, 70));
+        minCovgSpinner.setMaximumSize(new Dimension(70, 70));
+
         /**
          * Only selects the project to run tests from
          */
@@ -71,12 +100,11 @@ public class OptimizationTool
                     project = jfc.getSelectedFile().getAbsolutePath();
                 }
                 if (project != null) {
-                    jUnitTestsButton.setEnabled(true);
+                    enableAllButtons();
                 }
                 File f = new File(project+"/src/test/java/RegressionTest.java");
                 if(f.exists()) {
-                    jUnitTestsButton.setEnabled(true);
-                    geneticStartButton.setEnabled(true);
+                    enableAllButtons();
                 }
             }
         });
@@ -108,9 +136,14 @@ public class OptimizationTool
         geneticStartButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                disableAllButtons();
                 if (project != null) {
                     try {
-                        output.append("\nRunning Genetic Test Generation\n");
+                        output.append("\nRunning Genetic Test Generation: " + project + "\n");
+                        // Get current value of generations to try
+                        maxGenerations = Integer.parseInt((String)maxGenList.getSelectedItem());
+                        // Get current value of desired coverage %
+                        minimumAcceptableCoverage = (int)minCovgSpinner.getValue();
                         TestSuite bestTS = runGeneticTestSuiteGeneration();
                         output.append("\n" + bestTS.toString());
                     } catch (Exception ex) {
@@ -119,12 +152,17 @@ public class OptimizationTool
                 } else {
                     output.append("\nChoose a project first.");
                 }
+                enableAllButtons();
             }
         });
 
         buttonsArea.add(chooseProjectButton);
         buttonsArea.add(jUnitTestsButton);
         buttonsArea.add(geneticStartButton);
+        buttonsArea.add(maxGenLabel);
+        buttonsArea.add(maxGenList);
+        buttonsArea.add(minCovgLabel);
+        buttonsArea.add(minCovgSpinner);
 
         // Below is based on example code from:
         // https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/uiswing/examples/components/TextSamplerDemoProject/src/components/TextSamplerDemo.java
@@ -156,12 +194,28 @@ public class OptimizationTool
         mainPane.add(textPane, BorderLayout.CENTER);
     }
 
+    public void disableAllButtons() {
+        Component[] buttons = buttonsArea.getComponents();
+        int buttonCount = buttonsArea.getComponentCount();
+        for (int i = 0; i < buttonCount; i++) {
+            buttons[i].setEnabled(false);
+        }
+    }
+
+    public void enableAllButtons() {
+        Component[] buttons = buttonsArea.getComponents();
+        int buttonCount = buttonsArea.getComponentCount();
+        for (int i = 0; i < buttonCount; i++) {
+            buttons[i].setEnabled(true);
+        }
+    }
+
     /**
      * Below is an altered version of GUI taken from
      * Oracle tutorial here: https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/uiswing/examples/start/HelloWorldSwingProject/src/start/HelloWorldSwing.java
      */
     private void displayGUI() {
-        guiFrame.setPreferredSize(new Dimension(640, 640));
+        guiFrame.setPreferredSize(new Dimension(2400, 1680));
         guiFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         buildComponents();
@@ -243,7 +297,7 @@ public class OptimizationTool
         }
 
         int generationCount = 0;
-        while (testPop.getBestTestSuite().getFitness() < getMinCovg()) {
+        while (generationCount < maxGenerations && testPop.getBestTestSuite().getFitness() < getMinCovg()) {
             System.out.println(
                     "Generation: " + generationCount
                             + " Coverage percentage: " + testPop.getBestTestSuite().getFitness());
@@ -344,7 +398,7 @@ public class OptimizationTool
             if (genRandomInt(0, 100) <= pivot) {
                 // Get random test suite to get test case from
                 TestSuite randomTs = testPop.getIndividualTestSuite(genRandomInt(0, testPop.getPopulationSize()-1));
-                int i = genRandomInt(0, randomTs.getTestSuiteSize());
+                int i = genRandomInt(0, randomTs.getTestSuiteSize()-1);
                 // Grab random test case from random test suite
                 String gene = randomTs.getIndividualTestCase(genRandomInt(0, randomTs.getTestSuiteSize()-1));
                 // Insert random test case at random point in test suite
