@@ -1,4 +1,4 @@
-package org.example;
+package src.main.java.org.example;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
@@ -10,7 +10,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * TestSuite
  * Models an individual in a population.
+ * @author Keian Kaserman, Reid McMullin, Kien Nguyen
+ * @version 1.0, Java 19, 04/26/23
  */
 public class TestSuite {
     private ArrayList<String> testCases = new ArrayList<>();
@@ -26,6 +29,13 @@ public class TestSuite {
     private String os;
     private int generationNum;
 
+    /**
+     * Constructor
+     * @param tsID ID number of test suite
+     * @param size number of test cases per test suite
+     * @param project directory of the currently-selected project
+     * @param generationNum current generation of test suite
+     */
     public TestSuite(int tsID, int size, String project, int generationNum) {
         this.tsID = tsID;
         this.size = size;
@@ -41,6 +51,9 @@ public class TestSuite {
         ignoreTestStatsLines = Pattern.compile(".*(Main|GROUP).*");
     }
 
+    /**
+     * Generates test suite with randomly selected test cases
+     */
     private void genTestSuite() {
         for (int i = 0; i < size; i++) {
             int index = numGenerator.nextInt(100);
@@ -49,6 +62,9 @@ public class TestSuite {
         }
     }
 
+    /**
+     * Generates names of each respective test case
+     */
     private static void genTestNames() {
         String baseTestName = "test";
         String zero = "0";
@@ -103,6 +119,9 @@ public class TestSuite {
         return generationNum;
     }
 
+    /**
+     * Generates coverage statistics for current test suite
+     */
     private void genCoverageStats() {
         try {
             // Build and run the process
@@ -125,6 +144,7 @@ public class TestSuite {
     /**
      * Renames coverage file generated, then
      * copies it to directory holding coverage files.
+     * @param testSetNumber ID number of the test set / CSV file
      */
     private void renameCoverageFile(int testSetNumber) {
         String directory = "/CoverageReports/";
@@ -156,7 +176,7 @@ public class TestSuite {
     /**
      * Remove main class which is untested and adds
      * column to indicate number of test cases.
-     *
+     * ----
      * Code adapted from example code here:
      * https://www.baeldung.com/apache-commons-csv
      */

@@ -1,4 +1,4 @@
-package org.example;
+package src.main.java.org.example;
 
 import javax.swing.*;
 import javax.swing.text.DefaultCaret;
@@ -10,9 +10,15 @@ import java.time.Instant;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+/**
+ * OptimizationTool
+ * GUI-based tool that uses a tournament-style genetic algorithm to optimize test case suite for programs.
+ * @author Keian Kaserman, Reid McMullin, Kien Nguyen
+ * @version 1.0, Java 19, 04/26/23
+ */
 public class OptimizationTool
 {
-    /**
+    /*
      * GUI component variables
      */
     private String appName = "Genetic Optimization Tool";
@@ -28,7 +34,7 @@ public class OptimizationTool
     private JComboBox maxGenList;
     private JSpinner minCovgSpinner;
     private long startExec, endExec;
-    /**
+    /*
      * Code logic variables.
      */
     private Population testPop;
@@ -41,7 +47,7 @@ public class OptimizationTool
 
     /**
      * Pattern taken from: https://www.tutorialspoint.com/how-to-add-action-listener-to-jbutton-in-java
-     * @param args
+     * @param args Command line arguments directly from user, not used
      */
     public static void main(String[] args) {
         OptimizationTool tool = new OptimizationTool();
@@ -69,7 +75,7 @@ public class OptimizationTool
         geneticStartButton.setMinimumSize(new Dimension(76, 42));
         geneticStartButton.setEnabled(false);
 
-        /**
+        /*
          * Allow selection of number of test cases in the test suite.
          */
         JLabel testCasesLabel = new JLabel("Test Cases/Suite");
@@ -79,9 +85,8 @@ public class OptimizationTool
         testCaseAmtBox.setMinimumSize(new Dimension(70, 70));
         testCaseAmtBox.setMaximumSize(new Dimension(70, 70));
 
-        /**
-         * Allow selection of max number of generations to attempt to find
-         * a solution in.
+        /*
+         * Allow selection of max number of generations to attempt to find a solution in.
          */
         JLabel maxGenLabel = new JLabel("Select Max Generation");
         String[] gen = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"};
@@ -90,7 +95,7 @@ public class OptimizationTool
         maxGenList.setMinimumSize(new Dimension(70, 70));
         maxGenList.setMaximumSize(new Dimension(70, 70));
 
-        /**
+        /*
          * Allow selection of minimum acceptable coverage desired
          */
         JLabel minCovgLabel = new JLabel("Select Minimum Coverage");
@@ -104,7 +109,7 @@ public class OptimizationTool
         minCovgSpinner.setMinimumSize(new Dimension(70, 70));
         minCovgSpinner.setMaximumSize(new Dimension(70, 70));
 
-        /**
+        /*
          * Only selects the project to run tests from
          */
         chooseProjectButton.addActionListener(new ActionListener() {
@@ -125,7 +130,8 @@ public class OptimizationTool
             }
         });
 
-        /** Creates JUnit 4 style tests using Randoop
+        /*
+         * Creates JUnit 4 style tests using Randoop
          */
         jUnitTestsButton.addActionListener(new ActionListener() {
             @Override
@@ -241,8 +247,8 @@ public class OptimizationTool
     }
 
     /**
-     * Below is an altered version of GUI taken from
-     * Oracle tutorial here: https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/uiswing/examples/start/HelloWorldSwingProject/src/start/HelloWorldSwing.java
+     * Below is an altered version of GUI taken from the Oracle tutorial below:
+     * https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/uiswing/examples/start/HelloWorldSwingProject/src/start/HelloWorldSwing.java
      */
     private void displayGUI() {
         guiFrame.setPreferredSize(new Dimension(2400, 1680));
@@ -255,6 +261,11 @@ public class OptimizationTool
         guiFrame.setVisible(true);
     }
 
+    /**
+     * Prints the standard terminal output of a given command-line process
+     * @param process command line arguments
+     * @throws IOException for readLine()
+     */
     public void printResults(Process process) throws IOException
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -302,7 +313,8 @@ public class OptimizationTool
         }
     }
 
-    /** Creates the set of tests to perform tournament
+    /**
+     * Creates the set of tests to perform tournament
      * style genetic selection from.
      */
     public void createInitialPopulation() {
@@ -315,10 +327,8 @@ public class OptimizationTool
     }
 
     /**
-     * Finds the best test suite based on coverage
-     * percentage
-     *
-     * @return
+     * Finds the best test suite based on coverage percentage
+     * @return the best, fittest test suite in the population
      */
     public TestSuite runGeneticTestSuiteGeneration() {
         // Ensure we have a list of test cases
@@ -341,7 +351,7 @@ public class OptimizationTool
     /**
      * Create a new population of test suites
      * @param testPop population to evolve from
-     * @return
+     * @return new population with updated test suites
      */
     private Population evolvePopulation(Population testPop) {
         Population evolvedPopulation = new Population(popSize);
@@ -375,9 +385,10 @@ public class OptimizationTool
     /**
      * Performs tournament style selection of test suites to narrow
      * down optimization of test cases selected.
-     *
+     * ----
      * Code is modified from example given here:
      * https://www.baeldung.com/java-genetic-algorithm
+     * @param testPop population being used in the tournament
      */
     public TestSuite doTournament(Population testPop) {
         Population tournament = new Population(tournamentSize);
@@ -393,9 +404,13 @@ public class OptimizationTool
      * Performs mutation of test suites
      * by cross-breeding them to test for
      * most efficient combination.
-     *
+     * ----
      * Code is modified from example given here:
      * https://www.baeldung.com/java-genetic-algorithm
+     * @param tsID ID value for newSuite
+     * @param ts1 fit test suite generated from doTournament()
+     * @param ts2 fit test suite generated from doTournament()
+     * @return new test suite with new test cases
      */
     private TestSuite doCrossover(int tsID, TestSuite ts1, TestSuite ts2) {
         // Turn individual test cases
@@ -439,7 +454,7 @@ public class OptimizationTool
      * Flexible generation of random integers
      * @param min smallest int value desired
      * @param max largest int value desired
-     * @return
+     * @return random integer value between min and max
      */
     private int genRandomInt(int min, int max) {
         return (min + (int) (Math.random() * ((max - min) + 1)));
@@ -447,6 +462,7 @@ public class OptimizationTool
 
     /**
      * Solution we want from algorithm.
+     * @return the minimum percentage value for an acceptable coverage
      */
     public int getMinCovg() {
         return minimumAcceptableCoverage;

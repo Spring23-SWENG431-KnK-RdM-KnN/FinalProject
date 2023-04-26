@@ -1,9 +1,12 @@
-package org.example;
+package src.main.java.org.example;
 
 import java.util.ArrayList;
 
 /**
+ * Population
  * Models a set of test suites.
+ * @author Keian Kaserman, Reid McMullin, Kien Nguyen
+ * @version 1.0, Java 19, 04/26/23
  */
 public class Population {
     private final ArrayList<TestSuite> pop;
