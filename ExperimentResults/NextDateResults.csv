@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,TEST_CASES,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+NextDate,org.example,DateCalculator,10,117,74,22,5,29,18,13,5,0,3
+NextDate,org.example,DateCalculator,20,117,74,22,5,29,18,13,5,0,3
+NextDate,org.example,DateCalculator,30,117,74,22,5,29,18,13,5,0,3
+NextDate,org.example,DateCalculator,40,117,74,22,5,29,18,13,5,0,3
+NextDate,org.example,DateCalculator,50,117,74,22,5,29,18,13,5,0,3
+NextDate,org.example,DateCalculator,60,117,74,22,5,29,18,13,5,0,3
+NextDate,org.example,DateCalculator,100,117,74,22,5,29,18,13,5,0,3
+NextDate,org.example,DateCalculator,33,0,191,0,27,0,47,0,18,0,3

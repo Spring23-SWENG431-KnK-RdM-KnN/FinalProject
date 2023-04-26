@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,TEST_CASES,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Commission,org.example,MonthSales,10,36,137,2,2,5,37,2,13,0,13
+Commission,org.example,MonthSales,20,36,137,2,2,5,37,2,13,0,13
+Commission,org.example,MonthSales,30,36,137,2,2,5,37,2,13,0,13
+Commission,org.example,MonthSales,40,36,137,2,2,5,37,2,13,0,13
+Commission,org.example,MonthSales,50,36,137,2,2,5,37,2,13,0,13
+Commission,org.example,MonthSales,60,36,137,2,2,5,37,2,13,0,13
+Commission,org.example,MonthSales,100,36,137,2,2,5,37,2,13,0,13
+Commission,org.example,MonthSales,24,0,173,0,4,0,42,0,15,0,13
