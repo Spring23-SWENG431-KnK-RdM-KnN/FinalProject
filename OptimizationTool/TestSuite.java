@@ -19,11 +19,14 @@ public class TestSuite {
     private String covgFile;
     private Pattern ignoreTestStatsLines;
     private String os;
+    private int generationNum;
 
-    public TestSuite(int tsID, int size, String project) {
+    public TestSuite(int tsID, int size, String project, int generationNum) {
+        this.tsID = tsID;
         this.size = size;
         this.project = project;
-        this.tsID = tsID;
+        this.generationNum = generationNum;
+
         if (masterListTestCases.isEmpty()) {
             genTestNames();
         }
@@ -56,18 +59,9 @@ public class TestSuite {
         }
     }
 
-    public int getTestSuiteSize() {
-        return size;
-    }
-
-    public String getIndividualTestCase(int index) {
-        return testCases.get(index);
-    }
-
-    public void setIndividualTestCase(int index, String tc) {
-        testCases.set(index, tc);
-    }
-
+    /**
+     * Create the command to generate coverage
+     */
     private void createMVNCommand() {
         String testCasesFile = "-Dtest=RegressionTest#";
         String testCasesTargeted = testCasesFile;
@@ -86,6 +80,22 @@ public class TestSuite {
         else {
             mvnCommand = new String[]{"mvn", "clean", "test", testCasesTargeted};
         }
+    }
+
+    public int getTestSuiteSize() {
+        return size;
+    }
+
+    public String getIndividualTestCase(int index) {
+        return testCases.get(index);
+    }
+
+    public void setIndividualTestCase(int index, String tc) {
+        testCases.set(index, tc);
+    }
+
+    public int getGenerationNum() {
+        return generationNum;
     }
 
     private void genCoverageStats() {

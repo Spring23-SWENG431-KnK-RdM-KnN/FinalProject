@@ -20,6 +20,7 @@ public class OptimizationTool
     private JButton chooseProjectButton;
     private JButton jUnitTestsButton;
     private JButton geneticStartButton;
+    private JComboBox testCaseAmtBox;
     private JComboBox maxGenList;
     private JSpinner minCovgSpinner;
     /**
@@ -62,6 +63,16 @@ public class OptimizationTool
         geneticStartButton.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 16));
         geneticStartButton.setMinimumSize(new Dimension(76, 42));
         geneticStartButton.setEnabled(false);
+
+        /**
+         * Allow selection of number of test cases in the test suite.
+         */
+        JLabel testCasesLabel = new JLabel("Test Cases/Suite");
+        String[] testCaseNums = {"10", "20", "30", "40", "50", "60"};
+        testCaseAmtBox = new JComboBox(testCaseNums);
+        testCaseAmtBox.setSelectedIndex(5);
+        testCaseAmtBox.setMinimumSize(new Dimension(70, 70));
+        testCaseAmtBox.setMaximumSize(new Dimension(70, 70));
 
         /**
          * Allow selection of max number of generations to attempt to find
@@ -144,6 +155,8 @@ public class OptimizationTool
                         maxGenerations = Integer.parseInt((String)maxGenList.getSelectedItem());
                         // Get current value of desired coverage %
                         minimumAcceptableCoverage = (int)minCovgSpinner.getValue();
+                        // Get num of test cases per test suite
+                        tsSize = Integer.parseInt((String)testCaseAmtBox.getSelectedItem());
                         TestSuite bestTS = runGeneticTestSuiteGeneration();
                         output.append("\n" + bestTS.toString());
                     } catch (Exception ex) {
@@ -156,13 +169,17 @@ public class OptimizationTool
             }
         });
 
-        buttonsArea.add(chooseProjectButton);
-        buttonsArea.add(jUnitTestsButton);
-        buttonsArea.add(geneticStartButton);
+        buttonsArea.add(testCasesLabel);
+        buttonsArea.add(testCaseAmtBox);
         buttonsArea.add(maxGenLabel);
         buttonsArea.add(maxGenList);
         buttonsArea.add(minCovgLabel);
         buttonsArea.add(minCovgSpinner);
+        buttonsArea.add(chooseProjectButton);
+        buttonsArea.add(jUnitTestsButton);
+        buttonsArea.add(geneticStartButton);
+
+
 
         // Below is based on example code from:
         // https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/uiswing/examples/components/TextSamplerDemoProject/src/components/TextSamplerDemo.java
@@ -278,7 +295,7 @@ public class OptimizationTool
     public void createInitialPopulation() {
         ArrayList<TestSuite> ats = new ArrayList<TestSuite>();
         for (int i = 0; i < popSize; i++) {
-            TestSuite ts = new TestSuite(i, tsSize, project);
+            TestSuite ts = new TestSuite(i, tsSize, project, 0);
             ats.add(ts);
         }
         testPop = new Population(ats);
@@ -298,9 +315,6 @@ public class OptimizationTool
 
         int generationCount = 0;
         while (generationCount < maxGenerations && testPop.getBestTestSuite().getFitness() < getMinCovg()) {
-            System.out.println(
-                    "Generation: " + generationCount
-                            + " Coverage percentage: " + testPop.getBestTestSuite().getFitness());
             testPop = evolvePopulation(testPop);
             generationCount++;
         }
@@ -375,7 +389,7 @@ public class OptimizationTool
         // into binary digits to pick randomly
         // from.
         int pivot = genRandomInt(0, 100);
-        TestSuite newSuite = new TestSuite(tsID, tsSize, project);
+        TestSuite newSuite = new TestSuite(tsID, tsSize, project, ts1.getGenerationNum()+1);
         for (int i = 0; i < tsSize; i++) {
             if (genRandomInt(0, 100) <= pivot) { // Take test case from first test suite
                 newSuite.setIndividualTestCase(i, ts1.getIndividualTestCase(i));
