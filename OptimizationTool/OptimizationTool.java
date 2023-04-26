@@ -29,7 +29,6 @@ public class OptimizationTool
     private int tournamentSize = popSize / 3;
     String project;
     private int minimumAcceptableCoverage = 90;
-    private boolean hasMutated;
 
     /**
      * Pattern taken from: https://www.tutorialspoint.com/how-to-add-action-listener-to-jbutton-in-java
@@ -276,11 +275,13 @@ public class OptimizationTool
                 // to try to find a better test suite
                 TestSuite newTS = doCrossover(i, fittestTS1, fittestTS2);
                 evolvedPopulation.addTestSuite(newTS);
-                if (i % 3 == 0) {
-                    // Ensure 33% mutation
-                    int mutationTsIndex = genRandomInt(0, evolvedPopulation.getPopulationSize()-1);
-                    mutate(evolvedPopulation.getIndividualTestSuite(mutationTsIndex));
-                }
+            }
+            // Ensure 1% mutation
+            int totalTestCases = popSize * tsSize;
+            int testCasesToMutate = totalTestCases / 100;
+            for (int i = 0; i < testCasesToMutate; i++) {
+                int mutationTsIndex = genRandomInt(0, evolvedPopulation.getPopulationSize()-1);
+                mutate(evolvedPopulation.getIndividualTestSuite(mutationTsIndex));
             }
         } catch (Exception ex) {
             ex.printStackTrace();
