@@ -1,6 +1,11 @@
+package org.example;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
+import org.apache.commons.csv.CSVRecord;
+
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -114,6 +119,7 @@ public class TestSuite {
         }
 
         renameCoverageFile(tsID);
+        //fixCSVEntries();
     }
 
     /**
@@ -123,13 +129,13 @@ public class TestSuite {
     private void renameCoverageFile(int testSetNumber) {
         String directory = "/CoverageReports/";
         String originalName = directory + "jacoco.csv";
-        covgFile = directory + "testSet" + testSetNumber + ".csv";
+        covgFile = project + directory + "testSet" + testSetNumber + ".csv";
         String[] renameFileAndMove;
         if (os.contains("Windows")) {
             renameFileAndMove = new String[]{"cmd.exe", "/c", "move \"" + project + originalName + "\"", "move \"" + project + covgFile + "\""};
         }
         else {
-            renameFileAndMove = new String[]{"mv", project + originalName, project + covgFile};
+            renameFileAndMove = new String[]{"mv", project + originalName, covgFile};
         }
         try {
             // Rename coverage file and move to right directory
@@ -147,11 +153,66 @@ public class TestSuite {
         }
     }
 
+    /**
+     * Remove main class which is untested and adds
+     * column to indicate number of test cases.
+     *
+     * Code adapted from example code here:
+     * https://www.baeldung.com/apache-commons-csv
+     */
+    private void fixCSVEntries() {
+        try {
+            // Read file in to gather data.
+            Reader in = new FileReader(covgFile);
+            CSVFormat csvFormat = CSVFormat.DEFAULT.builder()
+                    .build();
+            Iterable<CSVRecord> records = csvFormat.parse(in);
+            Matcher match;
+            String[] HEADERS = null;
+
+            Map<String, String> analyzedClass = null;
+            for (CSVRecord record : records) {
+                String stringRecord = record.toString();
+                match = ignoreTestStatsLines.matcher(stringRecord);
+                if (!match.matches()) {
+                    analyzedClass = record.toMap();
+                }
+            }
+
+            analyzedClass.put("TEST_CASES", String.valueOf(testCases.size()));
+            HEADERS = (String[]) analyzedClass.keySet().toArray();
+   
+            // Write new file out with updated data.
+            StringWriter sw = new StringWriter();
+            csvFormat = CSVFormat.DEFAULT.builder()
+                    .setHeader()
+                    .build();
+            try (final CSVPrinter printer = new CSVPrinter(sw, csvFormat)) {
+
+                analyzedClass.forEach((k, v) -> {
+                    try {
+                        printer.printRecord(k, v);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(e);
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+    }
+
+    /**
+     * Grabs instructions covered statistics from coverage file.
+     */
     private void calcCovgPercent() {
         try {
             // read data from coverage file
             // Modified from example here: https://stackabuse.com/reading-and-writing-csvs-in-java/
-            BufferedReader reader = new BufferedReader(new FileReader(project+covgFile));
+            BufferedReader reader = new BufferedReader(new FileReader(covgFile));
             String row;
             int rowNum = 0;
             int instructionsMissed = 0, instructionsCovered = 0;
@@ -176,6 +237,10 @@ public class TestSuite {
         }
     }
 
+    /**
+     * Calculates fitness based on coverage stats.
+     * @return coverage percentage of instructions covered
+     */
     public int getFitness() {
         if (covgPercentage == 0) {
             genCoverageStats();

@@ -1,9 +1,13 @@
+package org.example;
+
 import javax.swing.*;
 import javax.swing.text.DefaultCaret;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.time.Instant;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class OptimizationTool
@@ -23,6 +27,7 @@ public class OptimizationTool
     private JComboBox testCaseAmtBox;
     private JComboBox maxGenList;
     private JSpinner minCovgSpinner;
+    private long startExec, endExec;
     /**
      * Code logic variables.
      */
@@ -70,7 +75,7 @@ public class OptimizationTool
         JLabel testCasesLabel = new JLabel("Test Cases/Suite");
         String[] testCaseNums = {"10", "20", "30", "40", "50", "60"};
         testCaseAmtBox = new JComboBox(testCaseNums);
-        testCaseAmtBox.setSelectedIndex(5);
+        testCaseAmtBox.setSelectedIndex(0);
         testCaseAmtBox.setMinimumSize(new Dimension(70, 70));
         testCaseAmtBox.setMaximumSize(new Dimension(70, 70));
 
@@ -81,7 +86,7 @@ public class OptimizationTool
         JLabel maxGenLabel = new JLabel("Select Max Generation");
         String[] gen = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"};
         maxGenList = new JComboBox(gen);
-        maxGenList.setSelectedIndex(5);
+        maxGenList.setSelectedIndex(9);
         maxGenList.setMinimumSize(new Dimension(70, 70));
         maxGenList.setMaximumSize(new Dimension(70, 70));
 
@@ -90,7 +95,7 @@ public class OptimizationTool
          */
         JLabel minCovgLabel = new JLabel("Select Minimum Coverage");
         SpinnerNumberModel minCovgModel;
-        int current = 30;
+        int current = 100;
         int min = 0;
         int max = 100;
         int step = 1;
@@ -157,7 +162,15 @@ public class OptimizationTool
                         minimumAcceptableCoverage = (int)minCovgSpinner.getValue();
                         // Get num of test cases per test suite
                         tsSize = Integer.parseInt((String)testCaseAmtBox.getSelectedItem());
+
+                        // Record start time for profiling
+                        startExec = Instant.now().getEpochSecond();
                         TestSuite bestTS = runGeneticTestSuiteGeneration();
+                        // Record end time for profiling
+                        endExec = Instant.now().getEpochSecond();
+
+                        // Output results
+                        output.append("Exec time: " + (endExec - startExec) + " sec\n");
                         output.append("\n" + bestTS.toString());
                     } catch (Exception ex) {
                         System.out.println(ex);
@@ -320,7 +333,7 @@ public class OptimizationTool
         }
 
         TestSuite bestTs = testPop.getBestTestSuite();
-        output.append("\nGeneration: " + generationCount);
+        output.append("\nGeneration: " + generationCount + "\n");
         testPop = null;
         return bestTs;
     }
