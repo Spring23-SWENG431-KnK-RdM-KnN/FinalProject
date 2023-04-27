@@ -3,19 +3,10 @@
 ## Instructions on How to Use OptimizationTool
 1. Open OptimizationTool.java under the OptimizationTool directory and run it
 2. Click the "Choose Project" button
-3. Find and open your desired Project folder
-4. If JUnit tests do not exist yet, click "Gen JUnit4 Tests" button (Tests should already exist, so move on to Step 5)
-   1. Once program outputs to GUI console saying that "RegressionTest0.java" and "RegressionTest.java" exist, close program
-   2. Through Intellij, if only "RegressionTest.java" exists:
-      1. Use the following link to convert "RegressionTest.java" from JUnit4 to JUnit5 (https://blog.jetbrains.com/idea/2020/08/migrating-from-junit-4-to-junit-5/#UsingInspectionstoMigrateAllTests)
-      2. Redo Steps 1-3 and then move to Step 5
-   3. Else if both "RegressionTest0.java" and "RegressionTest.java" exist:
-      1. Delete "RegressionTest.java" which should have only a few lines of code
-      2. Refactor -> Rename file... from "RegressionTest0.java" to "RegressionTest.java"
-      3. Use the following link to convert "RegressionTest.java" from JUnit4 to JUnit5 (https://blog.jetbrains.com/idea/2020/08/migrating-from-junit-4-to-junit-5/#UsingInspectionstoMigrateAllTests)
-      4. Redo Steps 1-3 and then move to Step 5
-5. Select your desired values for the following values: "Test Cases/Suite", "Select Max Generation", "Select Minimum Coverage"
-6. Click "Start Genetic Test Selection" button and then wait for output to appear
+3. Find and open your desired Project folder (Options include: Triangle, NextDate, Commission)
+4. Select your desired values for the following values: "Test Cases/Suite", "Select Max Generation", "Select Minimum Coverage"
+5. Click "Start Genetic Test Selection" button and then wait for output to appear
+- ** Author's Note: The experimenters for this project have already utilized the "Gen JUnit4 Tests" button but due to the requirements of manual conversion, it is not advised to generate new tests when using the tool. **
 
 ## File Structure
 - Commission: computes the commission earned by salesman of locks, stocks, and barrels
