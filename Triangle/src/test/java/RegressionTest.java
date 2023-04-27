@@ -21,7 +21,7 @@ public class RegressionTest {
     public void test002() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test002");
-        
+
         String str5 = triangleDeterminer.getTriangleType((int) '#', (int) (byte) 10, (int) (short) 0, 0);
         String str10 = triangleDeterminer.getTriangleType(1, 1, 0, 0);
         Class<?> wildcardClass11 = triangleDeterminer.getClass();
@@ -34,7 +34,7 @@ public class RegressionTest {
     public void test003() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test003");
-        
+
         String str5 = triangleDeterminer.getTriangleType((int) '#', (int) (byte) 10, (int) (short) 0, 0);
         String str10 = triangleDeterminer.getTriangleType(1, 1, 0, 0);
         String str15 = triangleDeterminer.getTriangleType((int) (byte) -1, 10, (int) (short) -1, (int) (byte) 100);
@@ -49,7 +49,7 @@ public class RegressionTest {
     public void test004() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test004");
-        
+
         String str5 = triangleDeterminer.getTriangleType((int) 'a', (int) (short) 1, 0, (int) 'a');
         Class<?> wildcardClass6 = triangleDeterminer.getClass();
         Assertions.assertEquals(str5, "Equilateral", "'" + str5 + "' != '" + "Equilateral" + "'");
@@ -60,7 +60,7 @@ public class RegressionTest {
     public void test005() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test005");
-        
+
         String str5 = triangleDeterminer.getTriangleType((int) '#', (int) (byte) 10, (int) (short) 0, 0);
         String str10 = triangleDeterminer.getTriangleType(1, 1, 0, 0);
         int int14 = triangleDeterminer.getMatchValue((int) '#', 100, 0);

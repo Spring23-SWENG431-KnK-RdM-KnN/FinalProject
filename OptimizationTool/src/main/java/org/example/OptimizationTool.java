@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * OptimizationTool
  * GUI-based tool that uses a tournament-style genetic algorithm to optimize test case suite for programs.
  * @author Keian Kaserman, Reid McMullin, Kien Nguyen
- * @version 1.0, Java 19, 04/26/23
+ * @version 1.0, Java 19, 04/27/23
  */
 public class OptimizationTool
 {
@@ -285,8 +285,8 @@ public class OptimizationTool
         String[] removeBadFile;
         String[] renameFile;
         if (os.contains("Windows")) {
-            removeBadFile = new String[]{"cmd.exe", "/c", "del \"" + project + "\\src\\test\\java" + targetFileName + "\""};
-            renameFile = new String[]{"cmd.exe", "/c", "move \"" + project + "\\src\\test\\java" + originalFileName + "\"", "move \"" + project + "\\src\\test\\java" + targetFileName + "\""};
+            removeBadFile = new String[]{"cmd.exe", "/c", "del", project + "\\src\\test\\java" + targetFileName};
+            renameFile = new String[]{"cmd.exe", "/c", "move", project + "\\src\\test\\java" + originalFileName, project + "\\src\\test\\java" + targetFileName};
         }
         else {
             removeBadFile = new String[]{"rm", project + targetFileName};
@@ -298,6 +298,12 @@ public class OptimizationTool
             //builder.inheritIO(); // Ensure thread isn't blocked on I/O
             builder.redirectErrorStream(true); // Mash error and stdout together
             builder = builder.directory(new File(project));
+            if (os.contains("Windows")) {
+                builder = builder.directory(new File(project + "\\src\\test\\java"));
+            }
+            else {
+                builder = builder.directory(new File(project));
+            }
             Process process = builder.start();
             printResults(process);
 
@@ -305,7 +311,12 @@ public class OptimizationTool
             builder = new ProcessBuilder(renameFile);
             //builder.inheritIO(); // Ensure thread isn't blocked on I/O
             builder.redirectErrorStream(true); // Mash error and stdout together
-            builder = builder.directory(new File(project));
+            if (os.contains("Windows")) {
+                builder = builder.directory(new File(project + "\\src\\test\\java"));
+            }
+            else {
+                builder = builder.directory(new File(project));
+            }
             process = builder.start();
             printResults(process);
         } catch (IOException e) {

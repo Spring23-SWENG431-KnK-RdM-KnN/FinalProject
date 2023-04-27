@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  * TestSuite
  * Models an individual in a population.
  * @author Keian Kaserman, Reid McMullin, Kien Nguyen
- * @version 1.0, Java 19, 04/26/23
+ * @version 1.0, Java 19, 04/27/23
  */
 public class TestSuite {
     private ArrayList<String> testCases = new ArrayList<>();
@@ -152,7 +152,7 @@ public class TestSuite {
         covgFile = project + directory + "testSet" + testSetNumber + ".csv";
         String[] renameFileAndMove;
         if (os.contains("Windows")) {
-            renameFileAndMove = new String[]{"cmd.exe", "/c", "move \"" + project + originalName + "\"", "move \"" + project + covgFile + "\""};
+            renameFileAndMove = new String[]{"cmd.exe", "/c", "move", project + originalName, covgFile};
         }
         else {
             renameFileAndMove = new String[]{"mv", project + originalName, covgFile};

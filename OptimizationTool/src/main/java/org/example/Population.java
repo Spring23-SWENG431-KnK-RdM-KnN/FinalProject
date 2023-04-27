@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Population
  * Models a set of test suites.
  * @author Keian Kaserman, Reid McMullin, Kien Nguyen
- * @version 1.0, Java 19, 04/26/23
+ * @version 1.0, Java 19, 04/27/23
  */
 public class Population {
     private final ArrayList<TestSuite> pop;

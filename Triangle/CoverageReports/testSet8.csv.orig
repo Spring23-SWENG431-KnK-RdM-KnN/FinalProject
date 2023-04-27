@@ -1,7 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Triangle,org.example,Main,68,0,4,0,17,0,4,0,2,0
-<<<<<<< HEAD:Triangle/CoverageReports/jacoco.csv
-Triangle,org.example,TriangleDeterminer,45,49,16,10,16,18,11,5,0,3
-=======
-Triangle,org.example,TriangleDeterminer,18,76,8,18,8,26,7,9,0,3
->>>>>>> 6ba5d5d (Add GUI functionality for processing test cases and generating JUnit tests):Triangle/CoverageReports/testSet8.csv
